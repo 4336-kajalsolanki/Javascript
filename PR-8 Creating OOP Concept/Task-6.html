@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+</head>
+
+<body>
+    <h1>Restaurant Menu</h1>
+
+    <h2>Add a Menu Item</h2>
+    <form id="addItemForm">
+        <label for="itemInput">Item:</label>
+        <input type="text" id="itemInput" style="margin-bottom: 15px; margin-left: 17px;" required><br>
+        <label for="priceInput">Price:</label>
+        <input type="number" id="priceInput" style="margin-bottom: 15px; margin-left: 15px;" required><br>
+        <label for="ratingInput">Rating:</label>
+        <input type="number" step="0.1" id="ratingInput" style="margin-bottom: 15px; margin-left: 6px;" required><br>
+        <button type="submit">Add Item</button>
+    </form>
+
+    <h2>Remove a Menu Item</h2>
+    <form id="removeItemForm">
+        <label for="itemRemoveInput">Item:</label>
+        <input type="text" id="itemRemoveInput" style="margin-bottom: 15px;" required><br>
+        <button type="submit">Remove Item</button>
+    </form>
+
+    <h2>Menu</h2>
+    <ul id="menuList"></ul>
+
+    <h2 id="averageRating">Average Rating: 0.00</h2>
+
+    <script>
+        class Restaurant {
+            constructor() {
+                this.menuItems = [];
+                this.prices = [];
+                this.ratings = [];
+            }
+
+            addItem(item, price, rating) {
+                this.menuItems.push(item);
+                this.prices.push(price);
+                this.ratings.push(rating);
+                this.displayMenu();
+            }
+
+            removeItem(item) {
+                let index = this.menuItems.indexOf(item);
+                if (index > -1) {
+                    this.menuItems.splice(index, 1);
+                    this.prices.splice(index, 1);
+                    this.ratings.splice(index, 1);
+                }
+                this.displayMenu();
+            }
+
+            calculateAverageRating() {
+                if (this.ratings.length === 0) return 0;
+                let sum = this.ratings.reduce((acc, rating) => acc + rating, 0);
+                return sum / this.ratings.length;
+            }
+
+            displayMenu() {
+                let menuList = document.getElementById('menuList');
+                menuList.innerHTML = '';
+                this.menuItems.forEach((item, index) => {
+                    let listItem = document.createElement('li');
+                    listItem.textContent = `${item} - $${this.prices[index]} - Rating: ${this.ratings[index]}`;
+                    menuList.appendChild(listItem);
+                });
+
+                let averageRating = document.getElementById('averageRating');
+                averageRating.textContent = `Average Rating: ${this.calculateAverageRating().toFixed(2)}`;
+            }
+        }
+
+        let restaurant = new Restaurant();
+
+        function handleAddItem(event) {
+            event.preventDefault();
+            let item = document.getElementById('itemInput').value;
+            let price = parseFloat(document.getElementById('priceInput').value);
+            let rating = parseFloat(document.getElementById('ratingInput').value);
+            restaurant.addItem(item, price, rating);
+            document.getElementById('itemInput').value = '';
+            document.getElementById('priceInput').value = '';
+            document.getElementById('ratingInput').value = '';
+        }
+
+        function handleRemoveItem(event) {
+            event.preventDefault();
+            let item = document.getElementById('itemRemoveInput').value;
+            restaurant.removeItem(item);
+            document.getElementById('itemRemoveInput').value = '';
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('addItemForm').addEventListener('submit', handleAddItem);
+            document.getElementById('removeItemForm').addEventListener('submit', handleRemoveItem);
+        });
+
+    </script>
+</body>
+
+</html>

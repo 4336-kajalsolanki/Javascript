@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure & IIFE</title>
+</head>
+<body>
+    <script>
+        // ===== closure concepts - 1st method ===== //
+        // function demo() {
+        //     let a = 4; //global
+        //     console.log(a+a);
+        // }
+        // demo ();
+
+        // ===== closure concepts - 2nd method ===== //
+        // let a = 4; //local
+        // function demo() {
+        //     console.log(a+a);
+        // }
+        // demo ();
+
+        // ===== IIFE ===== //
+        // (function name () {
+        //     console.log("Hello...");
+        // })();
+
+        // ===== arrow function in IIEF ===== //
+        (let = () => {
+            console.log("Ghare Jav...");
+        })();
+    </script>
+    
+</body>
+</html>

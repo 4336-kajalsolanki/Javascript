@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object & DOM&BOM</title>
+</head>
+<body>
+    <!-- ===== Simple Object ===== -->
+    <!-- <script>
+        let obj = {
+            name: "kajal",
+            age: 21,
+            email: "solankikajal0708@gmail.com",
+            mobile: "90231",
+        };
+        console.log(obj);
+    </script> -->
+
+    <!-- ===== Array In Multiple Object - 1st Method ===== -->
+    <!-- <script>
+        let user = [
+            {
+                name: "kajal",
+                age: 22,
+                email: "solankikajal0708@gmail.com",
+                mobile: "12345",
+            },
+            {
+                name: "pruthviraj",
+                age: 24,
+                email: "pruthviraj0503@gmail.com",
+                mobile: "12345",
+            },
+            {
+                name: "dhruti",
+                age: 29,
+                email: "dhruti2095@gmail.com",
+                mobile: "12345",
+            },
+        ];
+        console.log(user);
+    </script> -->
+
+    <!-- ===== Array In Multiple Object - 2nd Method ===== -->
+    <!-- <script>
+        let user = [
+            {
+                name: "kajal",
+                age: 22,
+                email: "solankikajal0708@gmail.com",
+                mobile: "12345",
+            },
+            {
+                name: "pruthviraj",
+                age: 24,
+                email: "pruthviraj0503@gmail.com",
+                mobile: "12345",
+            },
+            {
+                name: "dhruti",
+                age: 29,
+                email: "dhruti2095@gmail.com",
+                mobile: "12345",
+            },
+        ];
+        console.log(user[0].name);
+    </script> -->
+
+    <!-- ===== Array In Object & Use Array Method===== -->
+    <!-- <script>
+        let data = [
+            {
+                name: "kajal",
+                age: 22,
+                email: "solankikajal0708@gmail.com",
+                mobile: "12345",
+            },
+            {
+                name: "pruthviraj",
+                age: 24,
+                email: "pruthviraj0503@gmail.com",
+                mobile: "12345",
+            },
+            {
+                name: "dhruti",
+                age: 29,
+                email: "dhruti2095@gmail.com",
+                mobile: "12345",
+            },
+        ];
+        let demo = data.map((val,index)=>val.age);
+        console.log(demo);
+    </script> -->
+
+    <!-- ===== Koi 1 Kai Ni Value Access Karva - 1st Method ===== -->
+    <!-- <script>
+        let use = {
+            name: "kajal",
+            age: 22,
+            email: "solankikajal0708@gmail.com",
+        };
+        console.log(use.name);
+    </script> -->
+
+    <!-- ===== Koi 1 Kai Ni Value Access Karva - 2nd Method ===== -->
+    <!-- <script>
+        let use = {
+            name: "kajal",
+            age: 22,
+            email: "solankikajal0708@gmail.com",
+        };
+        console.log(use["name"]);
+    </script> -->
+
+    <!-- ===== Koi Kai Ni Value Change Karva ===== -->
+    <!-- <script>
+        let use = {
+            name: "kajal",
+            age: 22,
+            email: "solankikajal0708@gmail.com",
+        };
+        use.email = "solankikajal0708@gmail.com";
+        console.log(use);
+    </script> -->
+
+    <!-- ===== Object In Key Add ===== -->
+    <!-- <script>
+        let use = {
+            name: "kajal",
+            age: 22,
+            email: "solankikajal0708@gmail.com",
+        };
+        use.mobile = "90231";
+        console.log(use);
+    </script> -->
+
+    <!-- ===== Simple Task - DOM & BOM ===== -->
+    <!-- <script>
+        console.log(document);
+        console.log(window);
+    </script> -->
+
+    <!-- ===== InnerHTML Task In Tag - 1st Method ===== -->
+    <!-- <h2>hii</h2>
+    <h2>hello</h2>
+    <script>
+        let demo = document.querySelectorAll("h2");
+        console.log(demo);
+
+        demo.forEach((val)=>{console.log(val);
+            val.style.color = "pink";
+        });
+    </script> -->
+
+    <!-- ===== InnerHTML Task In Tag - 2nd Method ===== -->
+    <!-- <h1>hii</h1>
+    <h1>hello</h1>
+    <script>
+        let demo = document.querySelectorAll("h1");
+        console.log(demo);
+
+        demo.forEach(function (demo) {
+            demo.innerHTML = "hello";
+            demo.style.color = "plum";
+            demo.style.fontSize = "60px";
+            demo.style.fontWeight = "700";
+            
+        });
+    </script> -->
+
+    <!-- ===== InnerHTML Task In Id ===== -->
+    <!-- <h1 id="main">hii</h1>
+    <script>
+     let demo = (document.getElementById("main").innerHTML="hello world");
+     document.getElementById("main").style.color = "pink";
+     document.getElementById("main").style.fontSize = "60px";
+    </script> -->
+
+    <!-- ===== InnerHTML Task In Id - Easy Method ===== -->
+    <!-- <h1 id="main">hii</h1>
+    <script>
+     let title = document.getElementById("main");
+     title.innerHTML = "kajal";
+     title.style.color = "skyblue";
+    </script> -->
+
+    <!-- ===== Button Submit Data ===== -->
+    <!-- <h1 id="main">hii</h1>
+    <button onclick = "submit()">click me.!</button>
+    <script>
+        function submit() {
+            let title = document.getElementById("main");
+            title.innerHTML = "kajal";
+            title.style.color = "green";
+        }
+    </script> -->
+
+    <!-- ===== Button Submit Return Data ===== -->
+    <!-- <h1 id="main">hello</h1>
+    <button onclick = "submit()">click me.!</button>
+    <script>
+        let user = "hello";
+        let normalcolor = "";
+
+        function submit() {
+            let title = document.getElementById("main");
+
+            if (title.innerHTML === user) {
+                title.innerHTML = "kajal";
+                title.style.color = "green";
+            } else {
+                title.innerHTML = user;
+                title.style.color = normalcolor;
+            }
+        }
+    </script> -->
+</body>
+</html>

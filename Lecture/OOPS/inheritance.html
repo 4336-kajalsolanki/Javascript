@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inheritance</title>
+  </head>
+  <body>
+    <script>
+
+      class Car {
+
+        constructor(name,modal,price)
+        {
+          this.name = name
+          this.modal = modal
+          this.price = price
+        }
+
+        printCarDetail()
+        {
+          console.log(`Welcome ${this.name} And You Purchased ${this.modal} And ${this.price}`);
+        }
+
+        purchase()
+        {
+          console.log(`Hello, You Purchased ${this.modal} And ${this.price}`);
+        }
+
+        gift()
+        {
+          console.log("Your Gift Value 20000.");
+        }
+
+      }
+
+      class Insurance extends Car {
+        constructor(name,modal,price,payment)
+        {
+          super(name,modal,price)
+          this.payment = payment
+        }
+
+        printInsurance()
+        {
+          this.printCarDetail()
+          console.log(`Your Policy No ${parseInt(Math.random()*10000)}  And Your Name Is ${this.name} `);
+        }
+
+        gift(name)
+        {
+          console.log(`Your Name Is ${name} Gift Value Is 5000.`);
+        }
+
+        gift()
+        {
+          console.log("Your Gift Value 2000.");
+        }
+
+      }
+
+      // let p1 = new Car('User','KP752',10000)
+      // p1.printCarDetail()
+      // p1.purchase()
+      // p1.gift()
+      
+      let p2 = new Insurance('User','KP752',10000,2000)
+      // p2.printInsurance()
+      // p2.printCarDetail()
+      p2.gift("user")
+      p2.gift()
+    
+    </script>
+  </body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+
+<body>
+    <!-- <script>
+        console.log(localStorage);
+
+        localStorage.setItem("name", "kajal");
+        localStorage.setItem("age", 21);
+
+        localStorage.clear();
+    </script> -->
+
+    <!-- <script>
+    let name = localStorage.getItem("name");
+    let age = parseInt(localStorage.getItem("age"));
+    console.log(name, "from storage");
+    console.log(age);
+    </script> -->
+
+    <!-- <script>
+    let arr = [1, 2, 3, 4];
+    localStorage.setItem("data", JSON.stringify(arr));
+    let result = JSON.parse(localStorage.getItem("data"));
+    console.log(result);
+    </script> -->
+
+    <!-- <input type="text" id="id"/>
+    <input type="text" id="productName"/>
+    <input type="text" id="price"/>
+    <button onclick="submit()">Submit</button>
+    <script>
+        let products = [
+        {
+          id: 1,
+          productName: "watch",
+          price: 1999,
+        },
+      ];
+      console.log(products);
+        function submit() {
+            let id = document.getElementById("id").value;
+            let productName = document.getElementById("productName").value;
+            let price = document.getElementById("price").value;
+
+            let product = {
+                id,
+                productName,
+                price,
+            };
+
+            console.log(product);
+
+            products.push(product);
+
+            console.log(products);
+        }
+    </script> -->
+
+    <input type="text" id="id" placeholder="add id"/>
+    <input type="text" id="productName" placeholder="add productName"/>
+    <input type="text" id="price" placeholder="add price"/>
+    <input type="text" id="date" placeholder="add date"/>
+    <input type="text" id="service" placeholder="add service"/>
+    <input type="text" id="category" placeholder="add category"/>
+    <button onclick="submit()">Submit</button>
+    <script>
+        let products = [
+            {
+                id: 1,
+                productName: "Samsung 653 L, 3 Star, Frost Free, Double Door, Convertible 5-in-1 Digital Inverter, Side By Side AI Enabled Smart Refrigerator with WiFi (RS76CG8003S9HL, Silver, Refined Inox, 2024 Model)",
+                price: 79990,
+                date: 2/6/24,
+                service: [1,2,3],
+                category: "electric",
+            },
+            {
+                id: 2,
+                productName: "ELYZIA Tripping Indoor Outdoor Wall Lamps/Lights lamp led Light Shade/Curved Black (06 Watts, Warm White, Die-Cast Aluminum)",
+                price: 549,
+                date: 5/6/24,
+                service: [1,2],
+                category: "home decor",
+            },
+            {
+                id: 3,
+                productName: "Fitniv Smart Watch Compatible with iPhone and Android Phones, Fitness Watch with Heart Rate & Sleep Monitor, IP68 Waterproof Fitness Tracker for Women Men, Blackish Green",
+                price: 7876,
+                date: 16/6/24,
+                service: [1,2,3,4,5],
+                category: "electric",
+            },
+            {
+                id: 4,
+                productName: "Daikin 1.5 Ton 3 Star Inverter Split AC (Copper, PM 2.5 Filter, Triple Display, Dew Clean Technology, Coanda Airflow, 2023 Model, MTKL50U, White)",
+                price: 36990,
+                date: 2/5/24,
+                service: [1,2,3,4],
+                category: "electric",
+            },
+            {
+                id: 5,
+                productName: "FKAR HANDICRAFTS Small Round Nightstand Table for Living Room or Bedroom, Metal Round End Table Modern Sofa Side Table with MDF Top Table for Living Room Home Décor-White Gold",
+                price: 1769,
+                date: 7/6/24,
+                service: [1],
+                category: "home decor",
+            },
+            {
+                id: 6,
+                productName: "Verbatim USB-C Pro Multiport Hub 5-in-1 Multiport Adapter USB-C to HDMI, RJ45, USB-A and USB-C PD, for Mac, MacBook Pro/Air, iPad Pro, Thinkpad, Windows Computer, Laptop and Co",
+                price: 7491,
+                date: 5/5/24,
+                service: [1,2],
+                category: "electric",
+            },
+            {
+                id: 7,
+                productName: "Lemorele Wireless Video Transmitter for Wireless Video Transmission System, 8 Wireless Video Transmitter can be Paired with 1 Receiver, Suitable for Videographer Filmmaker",
+                price: 17387,
+                date: 10/4/24,
+                service: [1,2,3],
+                category: "electric",
+            },
+            {
+                id: 8,
+                productName: "THEARTISANEMPORIUM Patram Hand-Painted Ceramic Dinner Set 20 Pieces with Serving Bowls - 6 Dinner Plates, 6 Katoris, 6 Side Plates & 2 Serving Bowls (20 Pieces, Serving for 6, Microwave Safe, White)",
+                price: 6015,
+                date: 8/6/24,
+                service: [1,2],
+                category: "kitchen containers",
+            },
+            {
+                id: 9,
+                productName: "Pigeon by Stovekraft Titanium Hard Anodized Aluminium Outer Lid Pressure Cooker - 5 Litres - Black",
+                price: 1789,
+                date: 15/4/24,
+                service: [1,2,3,4,5],
+                category: "kitchen containers",
+            },
+            {
+                id: 10,
+                productName: "Amazon Brand - Solimo Upright Revolving Plastic Spice Rack, Ovals, 8 Pieces,Silver, Tiered Shelf, ?Countertop",
+                price: 349,
+                date: 1/5/24,
+                service: [1,2,3],
+                category: "kitchen containers",
+            },
+            {
+                id: 11,
+                productName: "GIVA 925 Silver Drop Wreath Studs Earrings Rings Pendant Necklace Bracelet Jewellery Set |Gifts for Girlfriend, Gifts for Women & Girls",
+                price: 1424,
+                date: 8/4/24,
+                service: [1],
+                category: "jewellery",
+            },
+            {
+                id: 12,
+                productName: "Campus Raise Chunky Sneakers for Women | Women's Sneakers with Chunky, Cushioned Outsole | Fashionable & Light Weight Mesh Upper | Casual Lace-Up Shoes for Women with Memory Foam Insole",
+                price: 1063,
+                date: 14/6/24,
+                service: [1,2,3,4,5],
+                category: "footwear",
+            },
+            {
+                id: 13,
+                productName: "ANAISA Women Blue Rayon Printed Kurta with Trouser Dupatta",
+                price: 1999,
+                date: 20/5/24,
+                service: [1,2,3],
+                category: "clothes",
+            },
+            {
+                id: 14,
+                productName: "Ancient Roots Combo of Multigrain Cookies & Oats & Seeds Cookies - 150g of Each (Pack 2) / Delicious Biscuits (16-18 Pcs) / For Healthy Snacks / Breakfast, Best Paired with Tea & Coffee, No Maida, No Sugar, No Palm Oil",
+                price: 298,
+                date: 25/5/24,
+                service: [1,2],
+                category: "food",
+            },
+            {
+                id: 15,
+                productName: "Lifeway Telugu Study Bible, Black PU Leather Touch Study Bible with QR Code, Study Notes with Maps, Charts & Illustrations, Easy to Carry Spiritual Devotions & Essays",
+                price: 79990,
+                date: 10/6/24,
+                service: [1,2],
+                category: "book",
+            },
+            {
+                id: 16,
+                productName: "Zeroway Microwave Oven Stand Wall Mount Heavy Load Shelf Stand Adjustable Baker's Rack 8 Hooks Kitchen Counter Storage Organiser Printer Shelf Fax Rack Black(1 Tier) Metal",
+                price: 1389,
+                date: 24/4/24,
+                service: [1,2,3,4],
+                category: "electric",
+            },
+            {
+                id: 17,
+                productName: "TOSHIBA 139 cm (55 inches) C350NP Series 4K Ultra HD Smart LED Google TV (Black)",
+                price: 37999,
+                date: 5/3/24,
+                service: [1],
+                category:"electric",
+            },
+            {
+                id: 18,
+                productName: "LG 7 Kg 5 Star Inverter Touch panel Fully-Automatic Front Load Washing Machine with In-Built Heater (FHM1207SDM, Middle Black, Steam for Hygiene Wash)",
+                price: 28990,
+                date: 10/3/24,
+                service: [1,2,3,4,5,6],
+                category: "electric",
+            },
+            {
+                id: 19,
+                productName: "VIDA V1 Plus Electric Scooter Powered by Hero | 100 km Range in one Charge | Top Speed 80 kmph (Black)",
+                price: 119900,
+                date: 14/6/24,
+                service: [1,2,3,4],
+                category: "electric",
+            },
+            {
+                id: 20,
+                productName: "The Face Shop Tea Tree Pore Ampoule | Low-Irritant Ampule Soothes & Moisturizes Skin Deeply | Minimize Pores Size & Remove Dead Skin Cells Gently | Suitable for Acne-Prone Skin |30ml,K-Beauty",
+                price: 2099,
+                date: 7/5/24,
+                service: [1,2,3,4],
+                category: "beauty",
+            },
+        ];
+        console.log(products);
+
+        function submit() {
+            let id = document.getElementById("id").value;
+            let product = document.getElementById("productName").value;
+            let price = document.getElementById("price").value;
+            let date = document.getElementById("date").value;
+            let service = document.getElementById("service").value;
+            let category = document.getElementById("category").value;
+
+            let obj = {
+                id,
+                productName,
+                price,
+                date,
+                service,
+                category,
+            };
+            console.log(obj);
+
+            products.push(obj);
+            localStorage.setItem("data",JSON.stringify(obj));
+
+            console.log(products);
+            localStorage.setItem("data",JSON.stringify(products));
+
+            let res = JSON.parse(localStorage.getItem("data"));
+            console.log(res);
+        }
+        </script>
+
+</body>
+
+</html>

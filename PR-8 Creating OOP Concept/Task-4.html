@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+</head>
+
+<body>
+    <h1>Employee Details</h1>
+    <p><strong>Name:</strong> <span id="name"></span></p>
+    <p><strong>Salary:</strong> <span id="salary"></span></p>
+    <p><strong>Hire Date:</strong> <span id="hireDate"></span></p>
+    <p><strong>Years of Service:</strong> <span id="yearsOfService"></span></p>
+
+    <script>
+        class Employee {
+
+            constructor(name, salary, hireDate) {
+                this.name = name;
+                this.salary = salary;
+                this.hireDate = new Date(hireDate);
+            }
+
+            calculateYearsOfService() {
+                let currentDate = new Date();
+                let years = currentDate.getFullYear() - this.hireDate.getFullYear();
+                const months = currentDate.getMonth() - this.hireDate.getMonth();
+                if (months < 0 || (months === 0 && currentDate.getDate() < this.hireDate.getDate())) {
+                    years--;
+                }
+                return years;
+            }
+        }
+
+        let emp = new Employee('John Doe', 50000, '2015-05-10');
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('name').textContent = emp.name;
+            document.getElementById('salary').textContent = emp.salary;
+            document.getElementById('hireDate').textContent = emp.hireDate.toDateString();
+            document.getElementById('yearsOfService').textContent = emp.calculateYearsOfService();
+        });
+
+    </script>
+</body>
+
+</html>

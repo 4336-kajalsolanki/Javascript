@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try & Catch</title>
+</head>
+
+<body>
+    <!-- ===== Try & Catch Example ===== -->
+    <!-- <script>
+        console.log("Hello World");
+        try {
+            let a = "kajal";
+            console.log(a);
+        } catch(err) {
+            console.log(err,"err");
+        }
+        console.log("Hii...");
+    </script> -->
+
+    <!-- <script>
+        let person = {
+            name: "kajal",
+            age:21,
+        };
+        console.log(person);
+        try {
+            person.map((val,index)=> {
+                console.log(val);
+            });
+        } catch(err) {
+            console.log(err);
+        } finally {
+            console.log("Finally Called");
+        }
+        console.log("Final Output");
+    </script> -->
+
+    <!-- <script>
+        let input = "manager";
+        let role = ["user","admin","seller"];
+        let result = role.includes(input);
+        console.log(result);
+    </script> -->
+
+    <!-- <script>
+        let input = "user";
+        let role = ["user","admin","seller"];
+        try {
+            if(!role.includes(input)) {
+                throw new error("You Are Not Allowed");
+            }
+            console.log(`welcome ${input}`);
+        } catch(err) { 
+            console.log(err);
+        }
+    </script> -->
+
+    <!-- ===== Extra Task - 1st Task ===== -->
+    <!-- <input type="text" id="username"/>
+    <input type="password" id="password"/>
+    <button onclick="submit()">submit</button>
+    <script>
+        let name = "kajal";
+        let password = "12345";
+        function submit() {
+            let username = document.getElementById("username").value;
+            console.log(username);
+            let password = document.getElementById("password").value;
+            console.log(password);
+
+            try {
+                if (username == "" && password == "") {
+                    throw new Error("Enter Your Username And Password");
+                }
+                if (username != "kajal") {
+                    throw new Error("Enter Your Vaild Username");
+                }
+                if (password != "12345") {
+                    throw new Error("Enter Your Vaild Password");
+                }
+                console.log("Welcome You Are Login Successfully..");
+            }
+            catch (err) {
+                console.log(err);
+            }
+        }
+    </script> -->
+
+    <!-- ===== Extra Task - 2nd Task ===== -->
+    <!-- <script>
+        let products = [
+            {
+                name: "kajal",
+                age: 21,
+                state: "gujarat",
+            },
+            {
+                name: "pruthviraj",
+                age: 25,
+                state: "gujarat",
+            },
+        ];
+        let input = {
+            name: "dhruti",
+            age: 29,
+            state: "gujarat",
+        };
+
+        try {
+            let duplicateproduct = products.find(products => products.name === input.name);
+
+            if (duplicateproduct) {
+                throw new Error("This Product Is Already Exists!");
+            } else {
+                products.push(input);
+                console.log("Input Added Successfully..");
+                console.log(products);
+            }
+        } 
+        catch (err) {
+            console.log(err);
+        }
+    </script> -->
+
+</body>
+
+</html>

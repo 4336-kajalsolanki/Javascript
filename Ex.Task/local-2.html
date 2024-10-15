@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local-2</title>
+</head>
+<body>
+    <input type="text" id="fname" placeholder="fname" />
+    <input type="text" id="lname" placeholder="lname" />
+    <input type="text" id="email" placeholder="email" />
+    <input type="text" id="password" placeholder="password" />
+    <button onclick="register()">Register</button><br /><br />
+
+    <!-- View User -->
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+    </table>
+
+    <script>
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+        let tbody = document.getElementById("tbody");
+
+        // Register User //
+        function register() {
+            try {
+                let firstName = document.getElementById("fname").value;
+                let lastName = document.getElementById("lname").value;
+                let email = document.getElementById("email").value;
+                let password = document.getElementById("password").value;
+
+                if (!firstName || !lastName || !email || !password) {
+                    throw new Error("All fields must be filled out");
+                }
+
+                let user = {
+                    firstName,
+                    lastName,
+                    email,
+                    password,
+                };
+
+                users.push(user);
+                localStorage.setItem("users", JSON.stringify(users));
+                location.reload();
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+        // Load Users //
+        function loadUser() {
+            tbody.innerHTML = "";
+            users.forEach((val, index) => {
+                let tr = document.createElement("tr");
+                tr.innerHTML = `
+                    <td>${index + 1}</td>
+                    <td>${val.firstName}</td>
+                    <td>${val.lastName}</td>
+                    <td>${val.email}</td>
+                    <td>${val.password}</td>
+                    <td><button onclick="deleteUser(${index})">Delete</button></td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // Delete User //
+        function deleteUser(i) {
+            users = users.filter((val, index) => index !== i);
+            localStorage.setItem("users", JSON.stringify(users));
+            loadUser();
+        }
+
+        // Initial Load //
+        loadUser();
+    </script>
+</body>
+</html>

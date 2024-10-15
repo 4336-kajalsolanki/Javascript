@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table Of Any Number Using Do While Loop.</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 18px;
+            text-align: left;
+        }
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<div id="table-container"></div>
+
+<script>
+    class MultiplicationTable {
+        constructor(number) {
+            this.number = number;
+        }
+
+        generateTable() {
+            let table = document.createElement('table');
+            let thead = table.createTHead();
+            let tbody = table.createTBody();
+
+            let headerRow = thead.insertRow();
+            let th1 = document.createElement('th');
+            let th2 = document.createElement('th');
+            let th3 = document.createElement('th');
+            th1.textContent = "Number";
+            th2.textContent = "Multiplier";
+            th3.textContent = "Product";
+            headerRow.appendChild(th1);
+            headerRow.appendChild(th2);
+            headerRow.appendChild(th3);
+
+            let i = 1;
+            do {
+                let row = tbody.insertRow();
+                let cellNumber = row.insertCell();
+                let cellMultiplier = row.insertCell();
+                let cellProduct = row.insertCell();
+                cellNumber.textContent = this.number;
+                cellMultiplier.textContent = i;
+                cellProduct.textContent = this.number * i;
+                i++;
+            } while (i <= 10);
+
+            return table;
+        }
+    }
+
+    let number = prompt("Enter A Number To Generate Its Multiplication Table:");
+    if (number !== null && !isNaN(number)) {
+        number = parseInt(number);
+
+        let multiplicationTable = new MultiplicationTable(number);
+        let table = multiplicationTable.generateTable();
+
+        document.getElementById('table-container').appendChild(table);
+    } else {
+        alert("Please Enter A Valid Number.");
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo API</title>
+</head>
+
+<body>
+    <div align="center">
+        <h2 style="text-decoration: underline; color: crimson; font-size: 30px;">( View Todos )</h2>
+        <table border="3" cellpadding="5">
+            <thead style="color: maroon; font-size: 22px;">
+                <th>Id</th>
+                <th>Todo</th>
+                <th>Completed</th>
+            </thead>
+            <tbody id="todos" style="color: rosybrown; font-size: 20px;"></tbody>
+        </table>
+    </div>
+
+    <script>
+        fetch('https://dummyjson.com/todos')
+            .then(res => res.json())
+            .then((data) => {
+                let todo = '';
+                data.todos.map((p) => {
+                    todo += `
+                        <tr>
+                            <td>${p.id}</td>
+                            <td>${p.todo}</td>
+                            <td>${p.completed}</td>
+                        </tr>
+                    `;
+                });
+                document.getElementById('todos').innerHTML = todo;
+            });
+    </script>
+</body>
+
+</html>

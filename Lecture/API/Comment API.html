@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment API</title>
+</head>
+
+<body>
+    <div align="center">
+        <h2 style="font-size: 30px; text-decoration: underline; color: yellowgreen;">^- View Comments -^</h2>
+        <table border="3" cellpadding="5">
+            <thead style="font-size: 21px; color: green;">
+                <th>Id</th>
+                <th>Body</th>
+                <th>Likes</th>
+                <th>Users FullName</th>
+            </thead>
+            <tbody id="comment" style="font-size: 20px; color: limegreen;"></tbody>
+        </table>
+    </div>
+    
+    <script>
+        fetch('https://dummyjson.com/comments')
+            .then(res => res.json())
+            .then((data) => {
+                let comm = '';
+                data.comments.map((p) => {
+                    comm += `
+                    <tr>
+                        <td>${p.id}</td>    
+                        <td>${p.body}</td>
+                        <td>${p.likes}</td>
+                        <td>${p.user.fullName}</td>    
+                    </tr>
+                `;
+                });
+                document.getElementById('comment').innerHTML = comm;
+            })
+    </script>
+
+</body>
+
+</html>

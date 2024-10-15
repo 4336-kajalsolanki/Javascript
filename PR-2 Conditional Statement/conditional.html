@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statement</title>
+</head>
+<body>
+    <!-- ========== 1.positive and negative ========== -->
+    <script>
+        let number = prompt("Enter Number: ");
+
+        if (number >= 0) {
+            console.log("This Number Is Positive.");
+        }
+        else if (number<0) {
+            console.log("This Number Is Negative.");
+        }
+        else {
+            console.log("This Number Is Zero");
+        }
+    </script>
+
+    <!-- ========== 2.even and odd ========== -->
+    <!-- <script>
+        let number = prompt("Enter Number: ");
+
+        if (number %2 == 0) {
+            console.log("This Number Is Even.");
+        }
+        else {
+            console.log("This Number Is Odd.");
+        }
+    </script> -->
+
+    <!-- ========== 3.leap year or not leap year ========== -->
+    <!-- <script>
+        let number = prompt("Enter Year: ");
+
+        if (number %4 == 0) {
+            console.log("This Year Is Leap Year.");
+        }
+        else {
+            console.log("This Year Is Not Leap Year.");
+        }
+    </script> -->
+    
+    <!-- ========== 4.greater in 4 numbers ========== -->
+    <!-- <script>
+        let a = parseInt(prompt("Enter First Number: "));
+        let b = parseInt(prompt("Enter Second Number: "));
+        let c = parseInt(prompt("Enter Third Number: "));
+        let d = parseInt(prompt("Enter Four Number: "));
+        let largest;
+
+        if (a>=b && a>=c && a>=d) {
+            console.log("Largest Number", a);
+        }
+        else if (b>=a && b>=c && b>=d) {
+            console.log("Largest Number", b);
+        }
+        else if (c>=b && c>=a && c>=d) {
+            console.log("Largest Number", c);
+        }
+        else {
+            console.log("Largest Number", d);
+        }
+    </script> -->
+
+    <!-- ========== 5.eligible for voting ========== -->
+    <!-- <script>
+        let age = prompt("Enter Your Age: ");
+
+        if (age>=18) {
+            console.log("Eligible For Vote...");
+        }
+        else {
+            console.log("Not Eligible For Vote...");
+        }
+    </script> -->
+
+    <!-- ========== 6.Calculate percentage and grade ========== -->
+    <!-- <script>
+        let Physics = parseInt(prompt("Enter Marks Physics: ")); 
+        let Chemistry = parseInt(prompt("Enter Marks Chemistry: ")); 
+        let Biology = parseInt(prompt("Enter Marks Biology: ")); 
+        let Mathematics = parseInt(prompt("Enter Marks Mathematics: ")); 
+        let Computer = parseInt(prompt("Enter Marks Computer: ")); 
+        let total;
+        let grade;
+
+        total = Physics + Chemistry + Biology + Mathematics + Computer;
+        grade = (total/500)*100;
+
+        if (grade>=90 && grade<100) {
+            console.log("A Grade");
+        }
+        else if (grade>=70 && grade<90) {
+            console.log("B Grade");
+        }
+        else if (grade>=60 && grade<70) {
+            console.log("C Grade");
+        }
+        else if (grade>=50 && grade<60) {
+            console.log("D Grade");
+        }
+        else {
+            console.log("FAIL");
+        }
+    </script> -->
+
+    <!-- ========== 7.month name from month number using switch case ========== -->
+    <!-- <script>
+        let number = prompt("Enter Number");
+
+        switch(number) {
+            case '1':
+                console.log("January");
+                break;
+            case '2':
+                console.log("February");
+                break;
+            case '3':
+                console.log("March");
+                break;
+            case '4':
+                console.log("April");
+                break;
+            case '5':
+                console.log("May");
+                break;
+            case '6':
+                console.log("June");
+                break;
+            case '7':
+                console.log("July");
+                break;
+            case '8':
+                console.log("August");
+                break;
+            case '9':
+                console.log("September");
+                break;
+            case '10':
+                console.log("October");
+                break;
+            case '11':
+                console.log("November");
+                break;
+            case '12':
+                console.log("December");
+                break;
+            default :
+                console.log(Invalid);        
+        }
+    </script> -->
+
+    <!-- ========== 8.week day from first letter of it using if else if ========== -->
+    <!-- <script>
+        let first_letter = prompt("Enter First Letter: ")
+
+        if (first_letter === "m") {
+            console.log("Monday");
+        }
+        else if (first_letter === "T") {
+            console.log("Tuesday");
+        }
+        else if (first_letter === "w") {
+            console.log("Wednesday");
+        }
+        else if (first_letter === "t") {
+            console.log("Thursday");
+        }
+        else if (first_letter === "f") {
+            console.log("Friday");
+        }
+        else if (first_letter === "S") {
+            console.log("Saturday");
+        }
+        else if (first_letter === "s") {
+            console.log("Sunday");
+        }
+        else {
+            console.log("Not Valid");
+        }
+    </script> -->
+
+    <!-- ========== 9.max of 4 number using nested if ========== -->
+    <!-- <script>
+        let a = parseInt(prompt("Enter First Number: "));
+        let b = parseInt(prompt("Enter Second Number: "));
+        let c = parseInt(prompt("Enter Third Number: "));
+        let d = parseInt(prompt("Enter Four Number: "));
+        let largest;
+
+        if (a>=b && a>=c && a>=d) {
+            console.log("Largest Number", a);
+        }
+        if (b>=a && b>=c && b>=d) {
+            console.log("Largest Number", b);
+        }
+        if (c>=b && c>=a && c>=d) {
+            console.log("Largest Number", c);
+        }
+        else {
+            console.log("Largest Number", d);
+        }
+    </script> -->
+
+    <!-- ========== 10.basic calculator using switch case ========== -->
+    <!-- <script>
+        let a = parseInt(prompt("Enter Value Of A :"));
+        let b = parseInt(prompt("Enter Value Of B :"));
+        let choice = prompt("Enter Choice +,-,*,/ :");
+        let ans;
+
+        switch (choice) {
+            case '+':
+                ans = a + b;
+                break;
+            case '-':
+                ans = a - b;
+                break;
+            case '*':
+                ans = a * b;
+                break;
+            case '/':
+                ans = a / b;
+                break;
+        }
+        console.log(ans);
+    </script> -->
+
+    <!-- ========== 11.basic calculator using ledder if else ========== -->
+    <!-- <script>
+        let a = parseInt(prompt("Enter First Number :"));
+        let b = parseInt(prompt("Enter Second Number :"));
+        let choice = prompt("Enter Choice +,-,*,/ :");
+
+        if (choice == "+") {
+            console.log(a + b);
+        } else if (choice == "-") {
+            console.log(a - b);
+        } else if (choice == "*") {
+            console.log(a * b);
+        } else if (choice == "/") {
+            console.log(a / b);
+        } else {
+            console.log("Invalid");
+        }
+    </script> -->
+
+    <!-- ========== 12.triangle is valid or not ========== -->
+    <!-- <script>
+        let angle_1 = parseInt(prompt("Enter angle_1 :"));
+        let angle_2 = parseInt(prompt("Enter angle_2 :"));
+        let angle_3 = parseInt(prompt("Enter angle_3 :"));
+        let total;
+
+        total = angle_1 + angle_2 + angle_3;
+        if(total === 180) {
+            console.log("Valid Triangle");
+        } else {
+            console.log("Invalid Triangle");
+        }
+    </script> -->
+    
+</body>
+</html>

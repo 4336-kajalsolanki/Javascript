@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+</head>
+<body>
+    <!-- ===== Form Task ===== -->
+    <input type="text" id="username"/>
+    <input type="password" id="password"/>
+    <p id = "err"></p>
+    <p id = "err2"></p>
+    <button onclick="submit()">submit</button>
+    <script>
+        let name = "kajal";
+        let password = "12345";
+        function submit() {
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            console.log(username);
+            console.log(password);
+            if(username == "" || username != "kajal") {
+                document.getElementById("err").innerHTML = "Enter Your Valid Username";
+                document.getElementById("err").style.color = "red";
+            } else {
+                document.getElementById("err").innerHTML = username;
+            }
+            if(password == "" || password.length>6) {
+                document.getElementById("err2").innerHTML = "Enter Your Valid Password";
+                document.getElementById("err2").style.color = "red";
+            } else {
+                document.getElementById("err2").innerHTML = password;
+            }
+        }
+    </script>
+</body>
+</html>

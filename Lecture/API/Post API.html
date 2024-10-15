@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post API</title>
+</head>
+
+<body>
+
+    <div align="center">
+        <h2>View Posts</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Srno.</th>
+                    <th>Title</th>
+                    <th>Tags</th>
+                    <th>Reactions</th>
+                </tr>
+            </thead>
+            <tbody id="postsdata"></tbody>
+        </table>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+        const viewPost = () => {
+            $.ajax({
+                type: 'GET',
+                url: 'https://dummyjson.com/posts',
+                success: function (res) {
+                    const posts = res.posts;
+                    console.log(posts);
+
+                    let tbl = "";
+                    posts.map((p, index) => {
+                        tbl += `
+                                    <tr>
+                                        <td>${++index}</td>
+                                        <td>${p.title}</td>
+                                    <td>`
+                        p.tags.map((tag) => {
+                            tbl += `
+                                    <button>${tag}</button>
+                                   `
+                        })
+
+                        tbl += `</td>
+
+                                       <td>
+                                            <span>Likes :- ${p.reactions.likes}</span>
+                                            <span>Dislikes :- ${p.reactions.dislikes}</span>
+                                        </td>
+                                    </tr>
+                                `
+                    })
+                    document.getElementById('postsdata').innerHTML = tbl;
+                }
+            })
+        }
+        viewPost();
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User API</title>
+</head>
+
+<body>
+    <div align="center">
+        <h2 style="text-decoration: underline; color: gold; font-size: 30px;">*-- View Users --*</h2>
+        <table border="3" cellpadding="5">
+            <thead style="color: goldenrod; font-size: 22px;">
+                <tr>
+                    <th>Users ID</th>
+                    <th>Fname</th>
+                    <th>Lname</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Contact No.</th>
+                    <th>Image</th>
+                    <th>Hair</th>
+                </tr>
+            </thead>
+            <tbody id="users" style="color: darkkhaki; font-size: 20px;"></tbody>
+        </table>
+    </div>
+
+    <script>
+        fetch('https://dummyjson.com/users')
+            .then(res => res.json())
+            .then((data) => {
+                let users = '';
+                data.users.map((p) => {
+                    users += `
+                        <tr>
+                             <td>${p.id}</td>
+                             <td>${p.firstName}</td>
+                             <td>${p.lastName}</td>
+                             <td>${p.age}</td>
+                             <td>${p.gender}</td>
+                             <td>${p.phone}</td>
+                             <td><img src ="${p.image}" alt="Image" width="100"></td>
+                             <td>Hair-color :- ${p.hair.color}<br>Hair-type :- ${p.hair.type}</td>
+                        </tr>
+                    `;
+                });
+                document.getElementById('users').innerHTML = users;
+            });
+    </script>
+</body>
+
+</html>

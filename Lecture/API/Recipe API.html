@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe API</title>
+</head>
+
+<body>
+    <div align="center">
+        <h2 style="text-decoration: underline; color: coral; font-size: 30px;">*View Recipes*</h2>
+        <table border="3" cellpadding="5">
+            <thead style="color: peru;">
+                <th>Id</th>
+                <th>Recipe Name</th>
+                <th>Cuisine</th>
+                <th>Ingredients</th>
+                <th>Tages</th>
+                <th>PrepMinutes</th>
+                <th>CookMinutes</th>
+                <th>Image</th>
+                <th>MealType</th>
+                <th>Review & Rating</th>
+            </thead>
+            <tbody id="recipe" style="color: lightcoral;"></tbody>
+        </table>
+    </div>
+    
+    <script>
+        fetch('https://dummyjson.com/recipes')
+            .then(res => res.json())
+            .then((data) => {
+                let rec = '';
+                data.recipes.map((p) => {
+                    rec += `
+                    <tr>
+                        <td>${p.id}</td>
+                        <td>${p.name}</td> 
+                        <td>${p.cuisine}</td> 
+                        <td>${p.ingredients}</td>
+                        <td>${p.tags}</td>    
+                        <td>${p.prepTimeMinutes}</td> 
+                        <td>${p.cookTimeMinutes}</td> 
+                        <td><img src ="${p.image}" alt="Image" width="100"></td>
+                        <td>${p.mealType}</td> 
+                        <td>reviews :- ${p.reviewCount}<br>rating :- ${p.rating}</td> 
+                    </tr>
+                `
+                });
+                document.getElementById('recipe').innerHTML = rec;
+
+            })
+    </script>
+</body>
+
+</html>

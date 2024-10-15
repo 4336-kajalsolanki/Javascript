@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let pass = prompt("password");
+        // P@ssw0rd
+        if (pass < 8) {
+            if (pass >= 'A' && pass <= 'Z') {
+                console.log("true");
+            }
+            else if (pass >= '0' && pass <= '9') {
+                console.log("true");
+            }
+
+            else if ("!@#$".includes(pass)) {
+                console.log("true");
+            }
+        }
+        else {
+            console.log("false");
+        }
+
+    </script>
+</body>
+
+</html>

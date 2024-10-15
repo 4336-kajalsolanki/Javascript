@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor</title>
+</head>
+
+<body>
+
+    <h3 id="msg"></h3>
+
+    <script type="text/javascript">
+
+        class Details {
+
+            constructor() {
+                this.a = 10;
+                this.b = 5;
+                this.data = [
+                    {
+                        name: 'kajal',
+                        phone: 1234
+                    },
+                    {
+                        name: 'pruthvi',
+                        phone: 5678
+                    },
+                    {
+                        name: 'prujal',
+                        phone: 7835
+                    }
+                ]
+            }
+
+            sum() {
+                console.log(`A = ${this.a + this.b}`);
+            }
+
+            min() {
+                console.log(`A = ${this.a}`);
+            }
+
+            details() {
+                console.log(this.data);
+            }
+
+        }
+        let prujal = new Details;
+        prujal.sum()
+        prujal.min();
+        prujal.details();
+
+    </script>
+</body>
+
+</html>

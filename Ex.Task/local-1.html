@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local-1</title>
+</head>
+
+<body>
+    <input type="text" id="fname" placeholder="fname" />
+    <input type="text" id="lname" placeholder="lname" />
+    <input type="text" id="email" placeholder="email" />
+    <input type="text" id="pass" placeholder="pass" />
+    <button onclick="register()">Register</button><br /><br />
+
+    <!-- View User -->
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+        <!-- <tr>
+          <td>1</td>
+          <td>Kajal</td>
+          <td>Solanki</td>
+          <td>kajal@gmail.com</td>
+          <td>12345</td>
+        </tr> -->
+        </tbody>
+    </table>
+
+    <script>
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+        let tbody = document.getElementById("tbody");
+        console.log(users);
+
+        // Register User //
+        function register() {
+            let firstName = document.getElementById("fname").value;
+            let lastName = document.getElementById("lname").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("pass").value;
+
+            let user = {
+                firstName,
+                lastName,
+                email,
+                password,
+            };
+
+            users.push(user);
+
+            localStorage.setItem("users", JSON.stringify(users));
+
+            console.log(users);
+            location.reload();
+        }
+
+        // Load Users //
+        function loadUser() {
+            tbody.innerHTML = "";
+            users.map((val, index) => {
+                let tr = document.createElement("tr");
+                tr.innerHTML = `
+           <td>${index + 1}</td>
+          <td>${val.firstName}</td>
+          <td>${val.lastName}</td>
+          <td>${val.email}</td>
+          <td>${val.password}</td>
+          <td><button onclick="deleteUser(${index})">Delete</button></td>
+          `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // Delete User //
+        function deleteUser(i) {
+            users = users.filter((val, index) => index !== i);
+            localStorage.setItem("users", JSON.stringify(users));
+            loadUser();
+        }
+        loadUser(); 
+    </script>
+</body>
+</html>

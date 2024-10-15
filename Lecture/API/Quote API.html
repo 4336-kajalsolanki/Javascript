@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote API</title>
+</head>
+
+<body>
+    <div align="center">
+        <h2 style="text-decoration: underline; font-size: 30px; color: steelblue;">! View Quotes !</h2>
+        <table border="3" cellpadding="5">
+            <thead style="font-size: 22px; color: dodgerblue;">
+                <th>Id</th>
+                <th>Quotes</th>
+                <th>Author</th>
+            </thead>
+            <tbody id="quote" style="color: cornflowerblue; font-size: 18px;"></tbody>
+        </table>
+    </div>
+
+    <script>
+        fetch('https://dummyjson.com/quotes')
+            .then(res => res.json())
+            .then((data) => {
+                let que = '';
+                data.quotes.map((p) => {
+                    que += `
+                        <tr>
+                            <td>${p.id}</td>    
+                            <td>${p.quote}</td>    
+                            <td>${p.author}</td>    
+                        </tr>
+                    `;
+                });
+                document.getElementById('quote').innerHTML = que;
+            });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Print HTML Table Using Constructor</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 18px;
+            text-align: left;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="2">
+        <div id="table-container"></div>
+    </table>
+
+    <script>
+        function Person(name, email, phone) {
+            this.name = name;
+            this.email = email;
+            this.phone = phone;
+        }
+
+        // Data array
+        let data = [
+            {
+                name: "jay",
+                email: "jay@gmail.com",
+                phone: "12345"
+            },
+            {
+                name: "ajay",
+                email: "ajay@gmail.com",
+                phone: "12345"
+            },
+            {
+                name: "vijay",
+                email: "vijay@gmail.com",
+                phone: "12345"
+            },
+            {
+                name: "ashish",
+                email: "ashish@gmail.com",
+                phone: "12345"
+            }
+        ];
+
+        let persons = data.map(item => new Person(item.name, item.email, item.phone));
+
+        function generateTable(persons) {
+            let table = document.createElement('table');
+            let thead = table.createTHead();
+            let tbody = table.createTBody();
+
+            let headers = ['Name', 'Email', 'Phone'];
+            let row = thead.insertRow();
+            headers.forEach(header => {
+                let th = document.createElement('th');
+                th.textContent = header;
+                row.appendChild(th);
+            });
+
+            persons.forEach(person => {
+                let row = tbody.insertRow();
+                let cellName = row.insertCell();
+                let cellEmail = row.insertCell();
+                let cellPhone = row.insertCell();
+                cellName.textContent = person.name;
+                cellEmail.textContent = person.email;
+                cellPhone.textContent = person.phone;
+            });
+
+            return table;
+        }
+
+        document.getElementById('table-container').appendChild(generateTable(persons));
+    </script>
+
+</body>
+
+</html>

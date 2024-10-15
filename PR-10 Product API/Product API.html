@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product API</title>
+</head>
+
+<body>
+    <div align="center">
+        <h2 style="font-size: 30px; text-decoration: underline; color: green;">* View Products *</h2>
+        <table border="3" cellpadding="6">
+            <thead style="font-size: 22px; color: yellowgreen;">
+                <tr>
+                    <th>ID</th>
+                    <th>Thumbnail</th>
+                    <th>Title</th>
+                    <th>Tags</th>
+                    <th>Reviews</th>
+                    <th>Images</th>
+                </tr>
+            </thead>
+            <tbody id="productsdata" style="font-size: 18px; color: rgb(96, 142, 3);"></tbody>
+        </table>
+    </div>
+
+    <script type="text/javascript">
+        fetch('https://dummyjson.com/products')
+            .then(res => res.json())
+            .then(data => {
+                let tbl = '';
+                data.products.map(product =>
+                    tbl += `
+                    <tr>
+                        <td>${product.id}</td>
+                        <td><img src="${product.thumbnail}" alt="Thumbnail" width="100"></td>
+                        <td>${product.title}</td>
+                        <td>${product.tags.map(tag => ` ${tag} `)}</td>
+                        <td>${product.reviews.map(review => `
+                            <div>
+                                Comment :- ${review.comment}<br>
+                                ReviewerName :- ${review.reviewerName}<br>
+                                Rating :- ${review.rating}<br>
+                            </div>
+                        `)}
+                        </td>
+                        <td>${product.images.map(image => `<img src="${image}" alt="Image" width="100">`)}</td>
+                    </tr>
+                `);
+
+                document.getElementById('productsdata').innerHTML = tbl;
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <!--font-->
+  <link rel="stylesheet" href="css/stylesheet.css">
+  <!--favicon-->
+  <link rel="shortcut icon" href="img/logo (4).png" type="image/x-icon">
+  <!--icon css-->
+  <link rel="stylesheet" href="css/all.min.css">
+  <!-- bootstrap online -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <!-- style.css -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="link-sidebar overflow-scroll">
+  <!-- pre-loader -->
+  <div class="loader">
+    <div class="pre-loader">
+      <img src="img/logo (4).png" alt="logo" />
+    </div>
+  </div>
+
+  <!-- main-wrapper -->
+  <div class="main-wrapper">
+    <!-- sidebar -->
+    <aside class="left-sidebar">
+      <div class="brand-logo d-flex align-items-center">
+        <div class="d-flex align-items-center">
+          <a href="#" class="text-nowrap">
+            <img src="img/logo (4).png" alt="brand-logo" />
+          </a>
+          <h4 class="ms-2 text-light">Amazon</h4>
+        </div>
+      </div>
+      <!-- navbar-menu -->
+      <nav class="sidebar-nav" style="padding: 0 16px;">
+        <div class="sidebar-wrapper">
+          <div class="bar-content scroll-sidebar">
+            <ul class="sidebar-menu">
+              <li class="nav-caption">
+                <iconify-icon class="mini-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                    <g fill="none" stroke="currentColor" stroke-width="1.5">
+                      <circle cx="5" cy="12" r="2"></circle>
+                      <circle cx="12" cy="12" r="2"></circle>
+                      <circle cx="19" cy="12" r="2"></circle>
+                    </g>
+                  </svg>
+                </iconify-icon>
+                <span class="hide-menu">Dashboards</span>
+              </li>
+              <!-- Dashboard -->
+              <li class="sidebar-item">
+                <a href="./dashboard.html" class="sidebar-link active">
+                  <iconify-icon>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                      <g fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path stroke-linecap="round" d="M14.5 6.5h3m0 0h3m-3 0v3m0-3v-3"></path>
+                        <path
+                          d="M2.5 6.5c0-1.886 0-2.828.586-3.414C3.672 2.5 4.614 2.5 6.5 2.5c1.886 0 2.828 0 3.414.586c.586.586.586 1.528.586 3.414c0 1.886 0 2.828-.586 3.414c-.586.586-1.528.586-3.414.586c-1.886 0-2.828 0-3.414-.586C2.5 9.328 2.5 8.386 2.5 6.5Zm11 11c0-1.886 0-2.828.586-3.414c.586-.586 1.528-.586 3.414-.586c1.886 0 2.828 0 3.414.586c.586.586.586 1.528.586 3.414c0 1.886 0 2.828-.586 3.414c-.586.586-1.528.586-3.414.586c-1.886 0-2.828 0-3.414-.586c-.586-.586-.586-1.528-.586-3.414Z">
+                        </path>
+                        <path
+                          d="M2.5 17.5c0-1.886 0-2.828.586-3.414c.586-.586 1.528-.586 3.414-.586c1.886 0 2.828 0 3.414.586c.586.586.586 1.528.586 3.414c0 1.886 0 2.828-.586 3.414c-.586.586-1.528.586-3.414.586c-1.886 0-2.828 0-3.414-.586C2.5 20.328 2.5 19.386 2.5 17.5Z"
+                          opacity=".5"></path>
+                      </g>
+                    </svg>
+                  </iconify-icon>
+                  <span class="hide-menu">Admin Dashboard</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="../user/user.html">
+                  <iconify-icon>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                      <g fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path
+                          d="M3 10.417c0-3.198 0-4.797.378-5.335c.377-.537 1.88-1.052 4.887-2.081l.573-.196C10.405 2.268 11.188 2 12 2c.811 0 1.595.268 3.162.805l.573.196c3.007 1.029 4.51 1.544 4.887 2.081C21 5.62 21 7.22 21 10.417v1.574c0 5.638-4.239 8.375-6.899 9.536C13.38 21.842 13.02 22 12 22s-1.38-.158-2.101-.473C7.239 20.365 3 17.63 3 11.991z"
+                          opacity=".5"></path>
+                        <circle cx="12" cy="9" r="2"></circle>
+                        <path d="M16 15c0 1.105 0 2-4 2s-4-.895-4-2s1.79-2 4-2s4 .895 4 2Z"></path>
+                      </g>
+                    </svg>
+                  </iconify-icon>
+                  <span class="hide-menu">User Dashboard</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a href="../user/cart.html" class="sidebar-link">
+                  <iconify-icon>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                      <g fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path stroke-linecap="round"
+                          d="M7.142 18.97c-1.957-.07-3.142-.313-3.97-1.142C2 16.657 2 14.771 2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11c0 3.771 0 5.657-1.172 6.828c-.808.809-1.956 1.06-3.828 1.137"
+                          opacity=".5"></path>
+                        <path
+                          d="M9.95 16.05c.93-.93 1.396-1.396 1.97-1.427c.053-.002.106-.002.159 0c.574.03 1.04.496 1.971 1.427c2.026 2.026 3.039 3.039 2.755 3.913a1.499 1.499 0 0 1-.09.218C16.297 21 14.865 21 12 21c-2.865 0-4.298 0-4.715-.819a1.496 1.496 0 0 1-.09-.218c-.284-.874.729-1.887 2.755-3.913Z">
+                        </path>
+                      </g>
+                    </svg>
+                  </iconify-icon>
+                  <span class="hide-menu">Cart Dashboard</span>
+                </a>
+              </li>
+              <!-- divider -->
+              <li>
+                <span class="sidebar-divider"></span>
+              </li>
+              <li class="nav-caption">
+                <iconify-icon class="mini-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                    <g fill="none" stroke="currentColor" stroke-width="1.5">
+                      <circle cx="5" cy="12" r="2"></circle>
+                      <circle cx="12" cy="12" r="2"></circle>
+                      <circle cx="19" cy="12" r="2"></circle>
+                    </g>
+                  </svg>
+                </iconify-icon>
+                <span class="hide-menu">Apps</span>
+              </li>
+              <!-- Apps -->
+              <li class="sidebar-item">
+                <a href="#" class="sidebar-link has-arrow">
+                  <iconify-icon>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                      <g fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path
+                          d="M3.864 16.455c-.858-3.432-1.287-5.147-.386-6.301C4.378 9 6.148 9 9.685 9h4.63c3.538 0 5.306 0 6.207 1.154c.901 1.153.472 2.87-.386 6.301c-.546 2.183-.818 3.274-1.632 3.91c-.814.635-1.939.635-4.189.635h-4.63c-2.25 0-3.375 0-4.189-.635c-.814-.636-1.087-1.727-1.632-3.91Z">
+                        </path>
+                        <path
+                          d="m19.5 9.5l-.71-2.605c-.274-1.005-.411-1.507-.692-1.886A2.5 2.5 0 0 0 17 4.172C16.56 4 16.04 4 15 4M4.5 9.5l.71-2.605c.274-1.005.411-1.507.692-1.886A2.5 2.5 0 0 1 7 4.172C7.44 4 7.96 4 9 4"
+                          opacity=".5"></path>
+                        <path d="M9 4a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2h-4a1 1 0 0 1-1-1Z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8 13v4m8-4v4m-4-4v4" opacity=".5">
+                        </path>
+                      </g>
+                    </svg>
+                  </iconify-icon>
+                  <span class="hide-menu">Ecommerce</span>
+                </a>
+                <!-- submenu -->
+                <ul class="sidebar-submenu">
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                      <span class="icon-small"></span>
+                      <span class="hide-menu">Shop</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                      <span class="icon-small"></span>
+                      <span class="hide-menu">Details</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                      <span class="icon-small"></span>
+                      <span class="hide-menu">List</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                      <span class="icon-small"></span>
+                      <span class="hide-menu">Checkout</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a href="#" class="sidebar-link has-arrow">
+                  <iconify-icon>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                      <g fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path
+                          d="M2.5 6.5c0-1.886 0-2.828.586-3.414C3.672 2.5 4.614 2.5 6.5 2.5c1.886 0 2.828 0 3.414.586c.586.586.586 1.528.586 3.414v11c0 1.886 0 2.828-.586 3.414c-.586.586-1.528.586-3.414.586c-1.886 0-2.828 0-3.414-.586C2.5 20.328 2.5 19.386 2.5 17.5z"
+                          opacity=".5"></path>
+                        <path
+                          d="M13.5 15.5c0-1.886 0-2.828.586-3.414c.586-.586 1.528-.586 3.414-.586c1.886 0 2.828 0 3.414.586c.586.586.586 1.528.586 3.414v2c0 1.886 0 2.828-.586 3.414c-.586.586-1.528.586-3.414.586c-1.886 0-2.828 0-3.414-.586c-.586-.586-.586-1.528-.586-3.414zm0-10c0-.932 0-1.398.152-1.765a2 2 0 0 1 1.083-1.083c.367-.152.833-.152 1.765-.152h2c.932 0 1.398 0 1.765.152a2 2 0 0 1 1.083 1.083c.152.367.152.833.152 1.765c0 .932 0 1.398-.152 1.765a2 2 0 0 1-1.083 1.083c-.367.152-.833.152-1.765.152h-2c-.932 0-1.398 0-1.765-.152a2 2 0 0 1-1.083-1.083C13.5 6.898 13.5 6.432 13.5 5.5Z">
+                        </path>
+                      </g>
+                    </svg>
+                  </iconify-icon>
+                  <span class="hide-menu">Blog</span>
+                </a>
+                <!-- submenu -->
+                <ul class="sidebar-submenu">
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                      <span class="icon-small"></span>
+                      <span class="hide-menu">Blog Posts</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                      <span class="icon-small"></span>
+                      <span class="hide-menu">Blog Details</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a href="#" class="sidebar-link">
+                  <iconify-icon>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                      <g fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path
+                          d="M3 10.417c0-3.198 0-4.797.378-5.335c.377-.537 1.88-1.052 4.887-2.081l.573-.196C10.405 2.268 11.188 2 12 2c.811 0 1.595.268 3.162.805l.573.196c3.007 1.029 4.51 1.544 4.887 2.081C21 5.62 21 7.22 21 10.417v1.574c0 5.638-4.239 8.375-6.899 9.536C13.38 21.842 13.02 22 12 22s-1.38-.158-2.101-.473C7.239 20.365 3 17.63 3 11.991z"
+                          opacity=".5"></path>
+                        <circle cx="12" cy="9" r="2"></circle>
+                        <path d="M16 15c0 1.105 0 2-4 2s-4-.895-4-2s1.79-2 4-2s4 .895 4 2Z"></path>
+                      </g>
+                    </svg>
+                  </iconify-icon>
+                  <span class="hide-menu">User Profile</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a href="#" class="sidebar-link">
+                  <iconify-icon>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                      <g fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path
+                          d="M2 12c0-3.771 0-5.657 1.172-6.828C4.343 4 6.229 4 10 4h4c3.771 0 5.657 0 6.828 1.172C22 6.343 22 8.229 22 12c0 3.771 0 5.657-1.172 6.828C19.657 20 17.771 20 14 20h-4c-3.771 0-5.657 0-6.828-1.172C2 17.657 2 15.771 2 12Z"
+                          opacity=".5"></path>
+                        <path stroke-linecap="round"
+                          d="m6 8l2.159 1.8c1.837 1.53 2.755 2.295 3.841 2.295c1.086 0 2.005-.765 3.841-2.296L18 8">
+                        </path>
+                      </g>
+                    </svg>
+                  </iconify-icon>
+                  <span class="hide-menu">Email</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a href="#" class="sidebar-link">
+                  <iconify-icon>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                      <g fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path
+                          d="M2 12c0-3.771 0-5.657 1.172-6.828C4.343 4 6.229 4 10 4h4c3.771 0 5.657 0 6.828 1.172C22 6.343 22 8.229 22 12v2c0 3.771 0 5.657-1.172 6.828C19.657 22 17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.172C2 19.657 2 17.771 2 14z">
+                        </path>
+                        <path stroke-linecap="round" d="M7 4V2.5M17 4V2.5M2 9h20" opacity=".5"></path>
+                        <circle cx="16.5" cy="16.5" r="1.5"></circle>
+                      </g>
+                    </svg>
+                  </iconify-icon>
+                  <span class="hide-menu">Calendar</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a href="#" class="sidebar-link">
+                  <iconify-icon>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                      <g fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path
+                          d="M3 11c0-3.75 0-5.625.955-6.939A5 5 0 0 1 5.06 2.955C6.375 2 8.251 2 12 2c3.75 0 5.625 0 6.939.955a5 5 0 0 1 1.106 1.106C21 5.375 21 7.251 21 11v2c0 3.75 0 5.625-.955 6.939a5 5 0 0 1-1.106 1.106C17.625 22 15.749 22 12 22c-3.75 0-5.625 0-6.939-.955a5 5 0 0 1-1.106-1.106C3 18.625 3 16.749 3 13z"
+                          opacity=".5"></path>
+                        <path stroke-linecap="round" d="M7 9h10"></path>
+                      </g>
+                    </svg>
+                  </iconify-icon>
+                  <span class="hide-menu">Kanban</span>
+                </a>
+              </li>
+
+              <!-- divider -->
+              <li>
+                <span class="sidebar-divider"></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- page-wrapper -->
+    <div class="page-wrapper">
+      <!-- Header -->
+      <header class="topbar">
+        <div class="with-vertical d-block">
+          <nav class="navbar navbar-expand-lg p-0">
+            <ul class="navbar-nav">
+              <li class="nav-item nav-icon-hover-bg rounded-circle d-flex">
+                <a href="#" class="nav-link side-nav-toggle" data-toggle="collapse" id="menu-toggle">
+                  <iconify-icon>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5">
+                        <path d="M20 7H4"></path>
+                        <path d="M20 12H4" opacity=".5"></path>
+                        <path d="M20 17H4"></path>
+                      </g>
+                    </svg>
+                  </iconify-icon>
+                </a>
+              </li>
+              <li class="nav-item d-none d-xl-flex nav-icon-hover-bg rounded-circle">
+                <a href="#" type="button" class="nav-link">
+                  <iconify-icon>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                      <g fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="11.5" cy="11.5" r="9.5"></circle>
+                        <path stroke-linecap="round" d="M18.5 18.5L22 22"></path>
+                      </g>
+                    </svg>
+                  </iconify-icon>
+                </a>
+              </li>
+              <li class="nav-item d-none d-lg-flex dropdown nav-icon-hover-bg rounded-circle">
+                <div class="hover-dd">
+                  <a href="#" class="nav-link" style="margin: 4px 0px;">
+                    <iconify-icon>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <g fill="none" stroke="currentColor" stroke-width="1.5">
+                          <path d="M2.5 6.5a4 4 0 1 1 8 0a4 4 0 0 1-8 0Zm11 11a4 4 0 1 1 8 0a4 4 0 0 1-8 0Z"
+                            opacity=".5"></path>
+                          <path d="M21.5 6.5a4 4 0 1 0-8 0a4 4 0 0 0 8 0Zm-11 11a4 4 0 1 0-8 0a4 4 0 0 0 8 0Z"></path>
+                        </g>
+                      </svg>
+                    </iconify-icon>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-nav dropdown-menu-animation py-0 overflow-hidden border-0">
+                    <div class="position-relative">
+                      <div class="row">
+                        <div class="col-8">
+                          <div class="p-4 pb-3">
+                            <div class="row">
+                              <div class="col-6">
+                                <div class="position-relative">
+                                  <a href="#" class="d-flex align-items-center pb-9 position-relative">
+                                    <div
+                                      class="bg-primary rounded round-48 me-3 d-flex align-items-center justify-content-center">
+                                      <iconify-icon icon="solar:chat-line-bold-duotone" class="text-primary">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                          viewBox="0 0 24 24">
+                                          <path fill="currentColor"
+                                            d="m13.629 20.472l-.542.916c-.483.816-1.69.816-2.174 0l-.542-.916c-.42-.71-.63-1.066-.968-1.262c-.338-.197-.763-.204-1.613-.219c-1.256-.021-2.043-.098-2.703-.372a5 5 0 0 1-2.706-2.706C2 14.995 2 13.83 2 11.5v-1c0-3.273 0-4.91.737-6.112a5 5 0 0 1 1.65-1.651C5.59 2 7.228 2 10.5 2h3c3.273 0 4.91 0 6.113.737a5 5 0 0 1 1.65 1.65C22 5.59 22 7.228 22 10.5v1c0 2.33 0 3.495-.38 4.413a5 5 0 0 1-2.707 2.706c-.66.274-1.447.35-2.703.372c-.85.015-1.275.022-1.613.219c-.338.196-.548.551-.968 1.262"
+                                            opacity=".5"></path>
+                                          <path fill="currentColor"
+                                            d="M7.25 9A.75.75 0 0 1 8 8.25h8a.75.75 0 0 1 0 1.5H8A.75.75 0 0 1 7.25 9m0 3.5a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 0 1.5H8a.75.75 0 0 1-.75-.75">
+                                          </path>
+                                        </svg>
+                                      </iconify-icon>
+                                    </div>
+                                    <div class="d-inline-block heading">
+                                      <h6 class="mb-0">Chat Application</h6>
+                                      <span class="d-block">New messages arrived</span>
+                                    </div>
+                                  </a>
+                                  <a href="#" class="d-flex align-items-center pb-9 position-relative">
+                                    <div
+                                      class="bg-blue rounded round-48 me-3 d-flex align-items-center justify-content-center">
+                                      <iconify-icon icon="solar:bill-list-bold-duotone" class="text-blue">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                          viewBox="0 0 24 24">
+                                          <path fill="currentColor"
+                                            d="M7.245 2h9.51c1.159 0 1.738 0 2.206.163a3.045 3.045 0 0 1 1.881 1.936C21 4.581 21 5.177 21 6.37v14.004c0 .858-.985 1.314-1.608.744a.946.946 0 0 0-1.284 0l-.483.442a1.657 1.657 0 0 1-2.25 0a1.657 1.657 0 0 0-2.25 0a1.657 1.657 0 0 1-2.25 0a1.657 1.657 0 0 0-2.25 0a1.657 1.657 0 0 1-2.25 0l-.483-.442a.946.946 0 0 0-1.284 0c-.623.57-1.608.114-1.608-.744V6.37c0-1.193 0-1.79.158-2.27c.3-.913.995-1.629 1.881-1.937C5.507 2 6.086 2 7.245 2"
+                                            opacity=".5"></path>
+                                          <path fill="currentColor"
+                                            d="M7 6.75a.75.75 0 0 0 0 1.5h.5a.75.75 0 0 0 0-1.5zm3.5 0a.75.75 0 0 0 0 1.5H17a.75.75 0 0 0 0-1.5zM7 10.25a.75.75 0 0 0 0 1.5h.5a.75.75 0 0 0 0-1.5zm3.5 0a.75.75 0 0 0 0 1.5H17a.75.75 0 0 0 0-1.5zM7 13.75a.75.75 0 0 0 0 1.5h.5a.75.75 0 0 0 0-1.5zm3.5 0a.75.75 0 0 0 0 1.5H17a.75.75 0 0 0 0-1.5z">
+                                          </path>
+                                        </svg>
+                                      </iconify-icon>
+                                    </div>
+                                    <div class="d-inline-block heading">
+                                      <h6 class="mb-0">Invoice App</h6>
+                                      <span class="d-block">Get latest invoice</span>
+                                    </div>
+                                  </a>
+                                  <a href="#" class="d-flex align-items-center pb-9 position-relative">
+                                    <div
+                                      class="bg-yellow rounded round-48 me-3 d-flex align-items-center justify-content-center">
+                                      <iconify-icon icon="solar:phone-calling-rounded-bold-duotone" class="text-yellow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                          viewBox="0 0 24 24">
+                                          <path fill="currentColor"
+                                            d="m10.038 5.316l.649 1.163c.585 1.05.35 2.426-.572 3.349c0 0-1.12 1.119.91 3.148c2.027 2.027 3.146.91 3.147.91c.923-.923 2.3-1.158 3.349-.573l1.163.65c1.585.884 1.772 3.106.379 4.5c-.837.836-1.863 1.488-2.996 1.53c-1.908.073-5.149-.41-8.4-3.66c-3.25-3.251-3.733-6.492-3.66-8.4c.043-1.133.694-2.159 1.53-2.996c1.394-1.393 3.616-1.206 4.5.38"
+                                            opacity=".5"></path>
+                                          <path fill="currentColor"
+                                            d="M13.26 1.88a.751.751 0 0 1 .861-.62c.025.005.107.02.15.03c.085.018.204.048.352.09c.297.087.712.23 1.21.458c.996.457 2.321 1.256 3.697 2.631c1.376 1.376 2.175 2.702 2.632 3.698c.228.498.37.912.457 1.21a5.727 5.727 0 0 1 .113.454l.005.031a.765.765 0 0 1-.617.878a.75.75 0 0 1-.86-.617a2.82 2.82 0 0 0-.081-.327a7.395 7.395 0 0 0-.38-1.004c-.39-.85-1.092-2.024-2.33-3.262c-1.237-1.238-2.411-1.939-3.262-2.329a7.394 7.394 0 0 0-1.003-.38a5.749 5.749 0 0 0-.318-.08a.759.759 0 0 1-.626-.861">
+                                          </path>
+                                          <path fill="currentColor" fill-rule="evenodd"
+                                            d="M13.486 5.33a.75.75 0 0 1 .927-.516l-.206.721l.206-.72h.003l.003.001l.008.002l.02.006l.056.02a5.028 5.028 0 0 1 .767.373c.489.29 1.157.77 1.942 1.556c.785.785 1.266 1.453 1.556 1.942c.145.245.241.444.303.59a2.969 2.969 0 0 1 .09.233l.005.02l.003.008v.003l.001.001s0 .002-.72.208l.72-.206a.75.75 0 0 1-1.439.422l-.003-.01a3.67 3.67 0 0 0-.25-.504c-.224-.377-.627-.947-1.327-1.647c-.7-.7-1.269-1.102-1.646-1.325a3.662 3.662 0 0 0-.504-.25l-.01-.004a.75.75 0 0 1-.505-.925"
+                                            clip-rule="evenodd"></path>
+                                        </svg>
+                                      </iconify-icon>
+                                    </div>
+                                    <div class="d-inline-block heading">
+                                      <h6 class="mb-0">Contact Application</h6>
+                                      <span class="d-block">2 Unsaved Contacts</span>
+                                    </div>
+                                  </a>
+                                  <a href="#" class="d-flex align-items-center pb-9 position-relative">
+                                    <div
+                                      class="bg-red rounded round-48 me-3 d-flex align-items-center justify-content-center">
+                                      <iconify-icon icon="solar:letter-bold-duotone" class="text-red">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                          viewBox="0 0 24 24">
+                                          <path fill="currentColor"
+                                            d="M14.2 3H9.8C5.652 3 3.577 3 2.289 4.318C1 5.636 1 7.758 1 12c0 4.243 0 6.364 1.289 7.682C3.577 21 5.652 21 9.8 21h4.4c4.148 0 6.223 0 7.511-1.318C23 18.364 23 16.242 23 12c0-4.243 0-6.364-1.289-7.682C20.423 3 18.348 3 14.2 3"
+                                            opacity=".5"></path>
+                                          <path fill="currentColor"
+                                            d="M19.128 8.033a.825.825 0 0 0-1.056-1.268l-2.375 1.98c-1.026.855-1.738 1.447-2.34 1.833c-.582.375-.977.5-1.357.5s-.774-.125-1.357-.5c-.601-.386-1.314-.978-2.34-1.834L5.928 6.765a.825.825 0 0 0-1.056 1.268l2.416 2.014c.975.812 1.765 1.47 2.463 1.92c.726.466 1.434.762 2.25.762c.814 0 1.522-.296 2.249-.763c.697-.448 1.487-1.107 2.462-1.92z">
+                                          </path>
+                                        </svg>
+                                      </iconify-icon>
+                                    </div>
+                                    <div class="d-inline-block heading">
+                                      <h6 class="mb-0">Email App</h6>
+                                      <span class="d-block">Get new emails</span>
+                                    </div>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-6">
+                                <div class="position-relative">
+                                  <a href="#" class="d-flex align-items-center pb-9 position-relative">
+                                    <div
+                                      class="bg-green rounded round-48 me-3 d-flex align-items-center justify-content-center">
+                                      <iconify-icon icon="solar:user-bold-duotone" class="text-green">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                          viewBox="0 0 24 24">
+                                          <circle cx="12" cy="6" r="4" fill="currentColor"></circle>
+                                          <path fill="currentColor"
+                                            d="M20 17.5c0 2.485 0 4.5-8 4.5s-8-2.015-8-4.5S7.582 13 12 13s8 2.015 8 4.5"
+                                            opacity=".5"></path>
+                                        </svg>
+                                      </iconify-icon>
+                                    </div>
+                                    <div class="d-inline-block heading">
+                                      <h6 class="mb-0">User Profile</h6>
+                                      <span class="d-block">learn more information</span>
+                                    </div>
+                                  </a>
+                                  <a href="#" class="d-flex align-items-center pb-9 position-relative">
+                                    <div
+                                      class="bg-primary rounded round-48 me-3 d-flex align-items-center justify-content-center">
+                                      <iconify-icon icon="solar:calendar-minimalistic-bold-duotone"
+                                        class="text-primary">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                          viewBox="0 0 24 24">
+                                          <path fill="currentColor"
+                                            d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724">
+                                          </path>
+                                          <path fill="currentColor"
+                                            d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14"
+                                            opacity=".5"></path>
+                                        </svg>
+                                      </iconify-icon>
+                                    </div>
+                                    <div class="d-inline-block heading">
+                                      <h6 class="mb-0">Calendar App</h6>
+                                      <span class="d-block">Get dates</span>
+                                    </div>
+                                  </a>
+                                  <a href="#" class="d-flex align-items-center pb-9 position-relative">
+                                    <div
+                                      class="bg-blue rounded round-48 me-3 d-flex align-items-center justify-content-center">
+                                      <iconify-icon icon="solar:smartphone-2-bold-duotone" class="text-blue">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                          viewBox="0 0 24 24">
+                                          <path fill="currentColor"
+                                            d="M5.172 3.172C4 4.343 4 6.229 4 10v4c0 3.771 0 5.657 1.172 6.828C6.343 22 8.229 22 12 22c3.771 0 5.657 0 6.828-1.172C20 19.657 20 17.771 20 14v-4c0-3.771 0-5.657-1.172-6.828C17.657 2 15.771 2 12 2C8.229 2 6.343 2 5.172 3.172"
+                                            opacity=".5"></path>
+                                          <path fill="currentColor"
+                                            d="M9 4.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5zM12 19a2 2 0 1 0 0-4a2 2 0 0 0 0 4">
+                                          </path>
+                                        </svg>
+                                      </iconify-icon>
+                                    </div>
+                                    <div class="d-inline-block heading">
+                                      <h6 class="mb-0">Contact List Table</h6>
+                                      <span class="d-block">Add new contact</span>
+                                    </div>
+                                  </a>
+                                  <a href="#" class="d-flex align-items-center pb-9 position-relative">
+                                    <div
+                                      class="bg-yellow rounded round-48 me-3 d-flex align-items-center justify-content-center">
+                                      <iconify-icon icon="solar:notes-bold-duotone" class="text-yellow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                          viewBox="0 0 24 24">
+                                          <path fill="currentColor" fill-rule="evenodd"
+                                            d="m20.83 10.715l-.518 1.932c-.605 2.255-.907 3.383-1.592 4.114a4 4 0 0 1-2.01 1.161c-.097.023-.195.04-.295.052c-.915.113-2.032-.186-4.064-.73c-2.255-.605-3.383-.907-4.114-1.592a4 4 0 0 1-1.161-2.011c-.228-.976.074-2.103.679-4.358l.517-1.932l.244-.905c.455-1.666.761-2.583 1.348-3.21a4 4 0 0 1 2.01-1.16c.976-.228 2.104.074 4.36.679c2.254.604 3.382.906 4.113 1.59a4 4 0 0 1 1.161 2.012c.228.976-.075 2.103-.679 4.358m-9.778-.91a.75.75 0 0 1 .919-.53l4.83 1.295a.75.75 0 1 1-.389 1.448l-4.83-1.294a.75.75 0 0 1-.53-.918m-.776 2.898a.75.75 0 0 1 .918-.53l2.898.777a.75.75 0 1 1-.388 1.448l-2.898-.776a.75.75 0 0 1-.53-.919"
+                                            clip-rule="evenodd"></path>
+                                          <path fill="currentColor"
+                                            d="M16.415 17.975a4 4 0 0 1-1.068 1.677c-.731.685-1.859.987-4.114 1.591s-3.383.907-4.358.679a4 4 0 0 1-2.011-1.161c-.685-.731-.988-1.859-1.592-4.114l-.517-1.932c-.605-2.255-.907-3.383-.68-4.358a4 4 0 0 1 1.162-2.011c.731-.685 1.859-.987 4.114-1.592c.426-.114.813-.218 1.165-.309l-.244.906l-.517 1.932c-.605 2.255-.907 3.382-.68 4.358a4 4 0 0 0 1.162 2.011c.731.685 1.859.987 4.114 1.592c2.032.544 3.149.843 4.064.73"
+                                            opacity=".5"></path>
+                                        </svg>
+                                      </iconify-icon>
+                                    </div>
+                                    <div class="d-inline-block heading">
+                                      <h6 class="mb-0">Notes Application</h6>
+                                      <span class="d-block">To-do and Daily tasks</span>
+                                    </div>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <img src="img/mega-dd-bg.jpg" alt="" class="img-fluid mega-dd-bg">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <!-- header-right -->
+            <a href="#" class="navbar-toggler p-0 border-0 nav-icon-hover-bg rounded-circle" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <iconify-icon style="font-size: 20px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M7 12a2 2 0 1 1-4 0a2 2 0 0 1 4 0m14 0a2 2 0 1 1-4 0a2 2 0 0 1 4 0">
+                  </path>
+                  <path fill="currentColor" d="M14 12a2 2 0 1 1-4 0a2 2 0 0 1 4 0" opacity=".5"></path>
+                </svg>
+              </iconify-icon>
+            </a>
+            <div class="collapse navbar-collapse justify-content-end show" id="navbarNav">
+              <div class="d-flex align-items-center justify-content-between">
+                <ul class="navbar-nav flex-row mx-auto ms-lg-auto align-items-center justify-content-center">
+                  <button type="button" onclick="logout()" class="btn btn-primary text-light">Logout</button>
+                  <!-- fullscreen -->
+                  <li class="nav-item">
+                    <a class="nav-link moon nav-icon-hover-bg rounded-circle" href="#" style="display: flex;"
+                      id="btnFullscreen">
+                      <iconify-icon style="font-size: 20px; display: flex; height: auto;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="feather feather-maximize">
+                          <path
+                            d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3">
+                          </path>
+                        </svg>
+                      </iconify-icon>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link moon nav-icon-hover-bg rounded-circle dark-mode" href="#" style="display: flex;">
+                      <iconify-icon style="font-size: 20px; display: flex; height: auto;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                          <path fill="currentColor"
+                            d="m21.067 11.857l-.642-.388zm-8.924-8.924l-.388-.642zM21.25 12A9.25 9.25 0 0 1 12 21.25v1.5c5.937 0 10.75-4.813 10.75-10.75zM12 21.25A9.25 9.25 0 0 1 2.75 12h-1.5c0 5.937 4.813 10.75 10.75 10.75zM2.75 12A9.25 9.25 0 0 1 12 2.75v-1.5C6.063 1.25 1.25 6.063 1.25 12zm12.75 2.25A5.75 5.75 0 0 1 9.75 8.5h-1.5a7.25 7.25 0 0 0 7.25 7.25zm4.925-2.781A5.746 5.746 0 0 1 15.5 14.25v1.5a7.247 7.247 0 0 0 6.21-3.505zM9.75 8.5a5.747 5.747 0 0 1 2.781-4.925l-.776-1.284A7.246 7.246 0 0 0 8.25 8.5zM12 2.75a.384.384 0 0 1-.268-.118a.285.285 0 0 1-.082-.155c-.004-.031-.002-.121.105-.186l.776 1.284c.503-.304.665-.861.606-1.299c-.062-.455-.42-1.026-1.137-1.026zm9.71 9.495c-.066.107-.156.109-.187.105a.285.285 0 0 1-.155-.082a.384.384 0 0 1-.118-.268h1.5c0-.717-.571-1.075-1.026-1.137c-.438-.059-.995.103-1.299.606z">
+                          </path>
+                        </svg>
+                      </iconify-icon>
+                    </a>
+                  </li>
+                  <!-- notification-dropdown -->
+                  <li class="nav-item dropdown nav-icon-hover-bg rounded-circle">
+                    <a class=" nav-link position-relative" href="#">
+                      <iconify-icon style="font-size: 20px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                          <g fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path
+                              d="M18.75 9.71v-.705C18.75 5.136 15.726 2 12 2S5.25 5.136 5.25 9.005v.705a4.4 4.4 0 0 1-.692 2.375L3.45 13.81c-1.011 1.575-.239 3.716 1.52 4.214a25.775 25.775 0 0 0 14.06 0c1.759-.498 2.531-2.639 1.52-4.213l-1.108-1.725a4.4 4.4 0 0 1-.693-2.375Z">
+                            </path>
+                            <path stroke-linecap="round" d="M7.5 19c.655 1.748 2.422 3 4.5 3s3.845-1.252 4.5-3M12 6v4"
+                              opacity=".5"></path>
+                          </g>
+                        </svg>
+                      </iconify-icon>
+                    </a>
+                    <div class="dropdown-menu notific content-dd dropdown-menu-end dropdown-menu-animate-up border-0">
+                      <div class="d-flex align-items-center justify-content-between py-3 px-7">
+                        <h5 class="mb-0 fs-5 fw-semibold">Notifications</h5>
+                        <span class="badge text-bg-primary rounded-4 px-3 py-1 lh-sm">5 new</span>
+                      </div>
+                      <div class="message-body">
+                        <div class="simplebar-wrapper" style="margin: 0px;">
+                          <div class="simplebar-mask">
+                            <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
+                              <div class="simplebar-content" style="padding: 0px;">
+                                <a href="#" class="py-6 px-7 d-flex align-items-center dropdown-item gap-3">
+                                  <span
+                                    class="flex-shrink-0 bg-red rounded-circle round d-flex align-items-center justify-content-center fs-6 text-red">
+                                    <iconify-icon icon="solar:widget-3-line-duotone">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                        viewBox="0 0 24 24">
+                                        <g fill="none" stroke="currentColor" stroke-width="1.5">
+                                          <path
+                                            d="M2.5 6.5a4 4 0 1 1 8 0a4 4 0 0 1-8 0Zm11 11a4 4 0 1 1 8 0a4 4 0 0 1-8 0Z"
+                                            opacity=".5"></path>
+                                          <path
+                                            d="M21.5 6.5a4 4 0 1 0-8 0a4 4 0 0 0 8 0Zm-11 11a4 4 0 1 0-8 0a4 4 0 0 0 8 0Z">
+                                          </path>
+                                        </g>
+                                      </svg>
+                                    </iconify-icon>
+                                  </span>
+                                  <div class="w-75 d-inline-block">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                      <h6 class="mb-1 fw-semibold">Launch Admin</h6>
+                                      <span class="d-block fs-2">9:30 AM</span>
+                                    </div>
+                                    <span class="d-block text-truncate text-truncate fs-11">Just see the my new
+                                      admin!</span>
+                                  </div>
+                                </a>
+                                <a href="#" class="py-6 px-7 d-flex align-items-center dropdown-item gap-3">
+                                  <span
+                                    class="flex-shrink-0 bg-primary rounded-circle round d-flex align-items-center justify-content-center fs-6 text-primary">
+                                    <iconify-icon icon="solar:calendar-line-duotone">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                        viewBox="0 0 24 24">
+                                        <g fill="none">
+                                          <path stroke="currentColor" stroke-width="1.5"
+                                            d="M2 12c0-3.771 0-5.657 1.172-6.828C4.343 4 6.229 4 10 4h4c3.771 0 5.657 0 6.828 1.172C22 6.343 22 8.229 22 12v2c0 3.771 0 5.657-1.172 6.828C19.657 22 17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.172C2 19.657 2 17.771 2 14z">
+                                          </path>
+                                          <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5"
+                                            d="M7 4V2.5M17 4V2.5M2.5 9h19" opacity=".5"></path>
+                                          <path fill="currentColor"
+                                            d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0">
+                                          </path>
+                                        </g>
+                                      </svg>
+                                    </iconify-icon>
+                                  </span>
+                                  <div class="w-75 d-inline-block">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                      <h6 class="mb-1 fw-semibold">Event today</h6>
+                                      <span class="d-block fs-2">9:15 AM</span>
+                                    </div>
+                                    <span class="d-block text-truncate text-truncate fs-11">Just a reminder that you
+                                      have event</span>
+                                  </div>
+                                </a>
+                                <a href="#" class="py-6 px-7 d-flex align-items-center dropdown-item gap-3">
+                                  <span
+                                    class="flex-shrink-0 bg-blue rounded-circle round d-flex align-items-center justify-content-center fs-6 text-blue">
+                                    <iconify-icon icon="solar:settings-line-duotone">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                        viewBox="0 0 24 24">
+                                        <g fill="none" stroke="currentColor" stroke-width="1.5">
+                                          <circle cx="12" cy="12" r="3"></circle>
+                                          <path
+                                            d="M13.765 2.152C13.398 2 12.932 2 12 2c-.932 0-1.398 0-1.765.152a2 2 0 0 0-1.083 1.083c-.092.223-.129.484-.143.863a1.617 1.617 0 0 1-.79 1.353a1.617 1.617 0 0 1-1.567.008c-.336-.178-.579-.276-.82-.308a2 2 0 0 0-1.478.396C4.04 5.79 3.806 6.193 3.34 7c-.466.807-.7 1.21-.751 1.605a2 2 0 0 0 .396 1.479c.148.192.355.353.676.555c.473.297.777.803.777 1.361c0 .558-.304 1.064-.777 1.36c-.321.203-.529.364-.676.556a2 2 0 0 0-.396 1.479c.052.394.285.798.75 1.605c.467.807.7 1.21 1.015 1.453a2 2 0 0 0 1.479.396c.24-.032.483-.13.819-.308a1.617 1.617 0 0 1 1.567.008c.483.28.77.795.79 1.353c.014.38.05.64.143.863a2 2 0 0 0 1.083 1.083C10.602 22 11.068 22 12 22c.932 0 1.398 0 1.765-.152a2 2 0 0 0 1.083-1.083c.092-.223.129-.483.143-.863c.02-.558.307-1.074.79-1.353a1.617 1.617 0 0 1 1.567-.008c.336.178.579.276.819.308a2 2 0 0 0 1.479-.396c.315-.242.548-.646 1.014-1.453c.466-.807.7-1.21.751-1.605a2 2 0 0 0-.396-1.479c-.148-.192-.355-.353-.676-.555A1.617 1.617 0 0 1 19.562 12c0-.558.304-1.064.777-1.36c.321-.203.529-.364.676-.556a2 2 0 0 0 .396-1.479c-.052-.394-.285-.798-.75-1.605c-.467-.807-.7-1.21-1.015-1.453a2 2 0 0 0-1.479-.396c-.24.032-.483.13-.82.308a1.617 1.617 0 0 1-1.566-.008a1.617 1.617 0 0 1-.79-1.353c-.014-.38-.05-.64-.143-.863a2 2 0 0 0-1.083-1.083Z"
+                                            opacity=".5"></path>
+                                        </g>
+                                      </svg>
+                                    </iconify-icon>
+                                  </span>
+                                  <div class="w-75 d-inline-block ">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                      <h6 class="mb-1 fw-semibold">Settings</h6>
+                                      <span class="d-block fs-2">4:36 PM</span>
+                                    </div>
+                                    <span class="d-block text-truncate text-truncate fs-11">You can customize this
+                                      template as you want</span>
+                                  </div>
+                                </a>
+                                <a href="#" class="py-6 px-7 d-flex align-items-center dropdown-item gap-3">
+                                  <span
+                                    class="flex-shrink-0 bg-yellow rounded-circle round d-flex align-items-center justify-content-center fs-6 text-yellow">
+                                    <iconify-icon icon="solar:widget-4-line-duotone">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                        viewBox="0 0 24 24">
+                                        <g fill="none" stroke="currentColor" stroke-width="1.5">
+                                          <path
+                                            d="M2.5 6.5c0-1.886 0-2.828.586-3.414C3.672 2.5 4.614 2.5 6.5 2.5c1.886 0 2.828 0 3.414.586c.586.586.586 1.528.586 3.414v11c0 1.886 0 2.828-.586 3.414c-.586.586-1.528.586-3.414.586c-1.886 0-2.828 0-3.414-.586C2.5 20.328 2.5 19.386 2.5 17.5z"
+                                            opacity=".5"></path>
+                                          <path
+                                            d="M13.5 15.5c0-1.886 0-2.828.586-3.414c.586-.586 1.528-.586 3.414-.586c1.886 0 2.828 0 3.414.586c.586.586.586 1.528.586 3.414v2c0 1.886 0 2.828-.586 3.414c-.586.586-1.528.586-3.414.586c-1.886 0-2.828 0-3.414-.586c-.586-.586-.586-1.528-.586-3.414zm0-10c0-.932 0-1.398.152-1.765a2 2 0 0 1 1.083-1.083c.367-.152.833-.152 1.765-.152h2c.932 0 1.398 0 1.765.152a2 2 0 0 1 1.083 1.083c.152.367.152.833.152 1.765c0 .932 0 1.398-.152 1.765a2 2 0 0 1-1.083 1.083c-.367.152-.833.152-1.765.152h-2c-.932 0-1.398 0-1.765-.152a2 2 0 0 1-1.083-1.083C13.5 6.898 13.5 6.432 13.5 5.5Z">
+                                          </path>
+                                        </g>
+                                      </svg>
+                                    </iconify-icon>
+                                  </span>
+                                  <div class="w-75 d-inline-block ">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                      <h6 class="mb-1 fw-semibold">Launch Admin</h6>
+                                      <span class="d-block fs-2">9:30 AM</span>
+                                    </div>
+                                    <span class="d-block text-truncate text-truncate fs-11">Just see the my new
+                                      admin!</span>
+                                  </div>
+                                </a>
+                                <a href="#" class="py-6 px-7 d-flex align-items-center dropdown-item gap-3">
+                                  <span
+                                    class="flex-shrink-0 bg-primary rounded-circle round d-flex align-items-center justify-content-center fs-6 text-primary">
+                                    <iconify-icon icon="solar:calendar-line-duotone">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                        viewBox="0 0 24 24">
+                                        <g fill="none">
+                                          <path stroke="currentColor" stroke-width="1.5"
+                                            d="M2 12c0-3.771 0-5.657 1.172-6.828C4.343 4 6.229 4 10 4h4c3.771 0 5.657 0 6.828 1.172C22 6.343 22 8.229 22 12v2c0 3.771 0 5.657-1.172 6.828C19.657 22 17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.172C2 19.657 2 17.771 2 14z">
+                                          </path>
+                                          <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5"
+                                            d="M7 4V2.5M17 4V2.5M2.5 9h19" opacity=".5"></path>
+                                          <path fill="currentColor"
+                                            d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0">
+                                          </path>
+                                        </g>
+                                      </svg>
+                                    </iconify-icon>
+                                  </span>
+                                  <div class="w-75 d-inline-block ">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                      <h6 class="mb-1 fw-semibold">Event today</h6>
+                                      <span class="d-block fs-2">9:15 AM</span>
+                                    </div>
+                                    <span class="d-block text-truncate text-truncate fs-11">Just a reminder that you
+                                      have event</span>
+                                  </div>
+                                </a>
+                                <a href="#" class="py-6 px-7 d-flex align-items-center dropdown-item gap-3">
+                                  <span
+                                    class="flex-shrink-0 bg-blue rounded-circle round d-flex align-items-center justify-content-center fs-6 text-blue">
+                                    <iconify-icon icon="solar:settings-line-duotone">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                        viewBox="0 0 24 24">
+                                        <g fill="none" stroke="currentColor" stroke-width="1.5">
+                                          <circle cx="12" cy="12" r="3"></circle>
+                                          <path
+                                            d="M13.765 2.152C13.398 2 12.932 2 12 2c-.932 0-1.398 0-1.765.152a2 2 0 0 0-1.083 1.083c-.092.223-.129.484-.143.863a1.617 1.617 0 0 1-.79 1.353a1.617 1.617 0 0 1-1.567.008c-.336-.178-.579-.276-.82-.308a2 2 0 0 0-1.478.396C4.04 5.79 3.806 6.193 3.34 7c-.466.807-.7 1.21-.751 1.605a2 2 0 0 0 .396 1.479c.148.192.355.353.676.555c.473.297.777.803.777 1.361c0 .558-.304 1.064-.777 1.36c-.321.203-.529.364-.676.556a2 2 0 0 0-.396 1.479c.052.394.285.798.75 1.605c.467.807.7 1.21 1.015 1.453a2 2 0 0 0 1.479.396c.24-.032.483-.13.819-.308a1.617 1.617 0 0 1 1.567.008c.483.28.77.795.79 1.353c.014.38.05.64.143.863a2 2 0 0 0 1.083 1.083C10.602 22 11.068 22 12 22c.932 0 1.398 0 1.765-.152a2 2 0 0 0 1.083-1.083c.092-.223.129-.483.143-.863c.02-.558.307-1.074.79-1.353a1.617 1.617 0 0 1 1.567-.008c.336.178.579.276.819.308a2 2 0 0 0 1.479-.396c.315-.242.548-.646 1.014-1.453c.466-.807.7-1.21.751-1.605a2 2 0 0 0-.396-1.479c-.148-.192-.355-.353-.676-.555A1.617 1.617 0 0 1 19.562 12c0-.558.304-1.064.777-1.36c.321-.203.529-.364.676-.556a2 2 0 0 0 .396-1.479c-.052-.394-.285-.798-.75-1.605c-.467-.807-.7-1.21-1.015-1.453a2 2 0 0 0-1.479-.396c-.24.032-.483.13-.82.308a1.617 1.617 0 0 1-1.566-.008a1.617 1.617 0 0 1-.79-1.353c-.014-.38-.05-.64-.143-.863a2 2 0 0 0-1.083-1.083Z"
+                                            opacity=".5"></path>
+                                        </g>
+                                      </svg>
+                                    </iconify-icon>
+                                  </span>
+                                  <div class="w-75 d-inline-block">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                      <h6 class="mb-1 fw-semibold">Settings</h6>
+                                      <span class="d-block fs-2">4:36 PM</span>
+                                    </div>
+                                    <span class="d-block text-truncate text-truncate fs-11">You can customize this
+                                      template as you want</span>
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="py-6 px-7 mb-1">
+                        <button class="btn btn-primary w-100">See All Notifications</button>
+                      </div>
+                  </li>
+                  <!-- language-dropdown -->
+                  <li class="nav-item dropdown nav-icon-hover-bg rounded-circle">
+                    <a class="nav-link" href="#">
+                      <img src="img/icon-flag-en.svg" alt="en-flag" height="20px" width="20px"
+                        class="rounded-circle object-fit-cover">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-animation border-0">
+                      <div class="message-body">
+                        <a href="#" class="d-flex align-items-center gap-2 py-3 px-4 dropdown-item">
+                          <div class="position-relative">
+                            <img src="img/icon-flag-en.svg" alt="" height="20px" width="20px"
+                              class="rounded-circle object-fit-cover">
+                          </div>
+                          <p class="mb-0" style="font-size: 0.875rem;">English (UK)</p>
+                        </a>
+                        <a href="#" class="d-flex align-items-center gap-2 py-3 px-4 dropdown-item">
+                          <div class="position-relative">
+                            <img src="img/icon-flag-cn.svg" alt="" height="20px" width="20px"
+                              class="rounded-circle object-fit-cover">
+                          </div>
+                          <p class="mb-0" style="font-size: 0.875rem;">中国人 (Chinese)</p>
+                        </a>
+                        <a href="#" class="d-flex align-items-center gap-2 py-3 px-4 dropdown-item">
+                          <div class="position-relative">
+                            <img src="img/icon-flag-fr.svg" alt="" height="20px" width="20px"
+                              class="rounded-circle object-fit-cover">
+                          </div>
+                          <p class="mb-0" style="font-size: 0.875rem;">français (French)</p>
+                        </a>
+                        <a href="#" class="d-flex align-items-center gap-2 py-3 px-4 dropdown-item">
+                          <div class="position-relative">
+                            <img src="img/icon-flag-sa.svg" alt="" height="20px" width="20px"
+                              class="rounded-circle object-fit-cover">
+                          </div>
+                          <p class="mb-0" style="font-size: 0.875rem;">عربي (Arabic)</p>
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- profile-dropdown -->
+                  <li class="nav-item dropdown">
+                    <a class="nav-link" href="#">
+                      <div class="d-flex align-items-center gap-2" style="line-height: 1.5;">
+                        <img src="img/user-1.jpg" class="rounded-circle" height="35px" width="35px" alt="profile">
+                        <iconify-icon style="font-size: .75rem; height: auto;">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                              d="m12.37 15.835l6.43-6.63C19.201 8.79 18.958 8 18.43 8H5.57c-.528 0-.771.79-.37 1.205l6.43 6.63c.213.22.527.22.74 0">
+                            </path>
+                          </svg>
+                        </iconify-icon>
+                      </div>
+                    </a>
+                    <div class="dropdown-menu profile-dropdown dropdown-menu-end border-0 dropdown-menu-animation">
+                      <div class="position-relative px-4 pt-3 pb-2">
+                        <div class="profile-menu d-flex align-items-center mb-3 pb-3">
+                          <img src="img/user-1.jpg" alt="person" class="rounded-circle" height="56px" width="56px">
+                          <div>
+                            <h5 class="mb-0" style="font-size: 15px;">
+                              David McMichael
+                              <span class="text-green" style="font-size: 13px;">Pro</span>
+                            </h5>
+                            <p class="mb-0 text-dark" style="font-size: 14px;">
+                              david@wrappixel.com
+                            </p>
+                          </div>
+                        </div>
+                        <div class="message-body">
+                          <a href="#" class="p-2 dropdown-item h6" style="font-size: 15px; border-radius: 8px;">
+                            My Profile </a>
+                          <a href="#" class="p-2 dropdown-item h6" style="font-size: 15px; border-radius: 8px;">
+                            My Subscription
+                          </a>
+                          <a href="#" class="p-2 dropdown-item h6" style="font-size: 15px; border-radius: 8px;">
+                            My Statements
+                            <span class="badge bg-red text-red rounded ms-8" style="margin-left: 10px;">4</span>
+                          </a>
+                          <a href="#" class="p-2 dropdown-item h6" style="font-size: 15px; border-radius: 8px;">
+                            Account Settings
+                          </a>
+                          <a href="#" class="p-2 dropdown-item h6" style="font-size: 15px; border-radius: 8px;">
+                            Sign Out
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <!-- bottom-area -->
+      <h1 class="admin ms-3" style="margin-top: 100px;">Admin Dashboard
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-success" style="margin-left: 30px;" data-toggle="modal"
+          data-target="#exampleModal">
+          Register
+        </button>
+      </h1>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Product Name</label>
+                <input type="text" class="form-control" placeholder="Enter product name" id="pname" />
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Price</label>
+                <input type="number" class="form-control" placeholder="price" id="price" />
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Description</label>
+                <input type="text" class="form-control" placeholder="Description" id="des" />
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Image</label>
+                <input type="text" class="form-control" placeholder="img https://" id="img" />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                Close
+              </button>
+              <button type="button" class="btn btn-primary" onclick="addProduct()">
+                Add Product
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Edit Modal -->
+      <div class="modal fade" id="editProductModal" tabindex="-1" role="dialog" aria-labelledby="editProductModal"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="editProductModal">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="editPname">Product Name</label>
+                <input type="text" class="form-control" placeholder="Enter product name" id="editPname" />
+              </div>
+              <div class="form-group">
+                <label for="editPrice">Price</label>
+                <input type="number" class="form-control" placeholder="price" id="editPrice" />
+              </div>
+              <div class="form-group">
+                <label for="editDes">Description</label>
+                <input type="text" class="form-control" placeholder="Description" id="editDes" />
+              </div>
+              <div class="form-group">
+                <label for="editImg">Image</label>
+                <input type="text" class="form-control" placeholder="img https://" id="editImg" />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                Close
+              </button>
+              <button type="button" class="btn btn-primary" onclick="updateProduct()">
+                Add To Update
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <table class="table" border="1" cellpadding="10" style="margin-top: 30px;">
+        <thead class="table-light">
+          <th>Id</th>
+          <th>Image</th>
+          <th>ProductName</th>
+          <th>Price</th>
+          <th>Description</th>
+          <th>View</th>
+          <th>Delete</th>
+          <th>isActive</th>
+        </thead>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+</body>
+
+<script>
+  let products = JSON.parse(localStorage.getItem("products")) || [];
+  let tbody = document.getElementById("tbody");
+
+  // Add Product //
+  function addProduct() {
+    let productName = document.getElementById("pname").value.trim();
+    let price = document.getElementById("price").value.trim();
+    let des = document.getElementById("des").value.trim();
+    let img = document.getElementById("img").value.trim();
+
+    if (!productName || !price || !des || !img) {
+      alert("All Fields Are Required.");
+      return;
+    }
+
+    let product = {
+      productName,
+      price,
+      des,
+      img,
+      isActive: true,
+    };
+
+    products.push(product);
+    localStorage.setItem("products", JSON.stringify(products));
+    location.reload();
+  }
+
+  // Load Product //
+  function loadProduct() {
+    products.map((val, index) => {
+      console.log(val);
+
+      let tr = document.createElement("tr");
+      tr.innerHTML = `
+
+        <td>${index + 1}</td>
+        <td><img src='${val.img}' height=50 width=50/></td>
+        <td>${val.productName}</td>
+        <td>${val.price}</td>
+        <td>${val.des}</td>
+        <td><button type="button" class="btn btn-secondary" onclick="viewProduct(${index})"  data-toggle="modal"
+          data-target="#editProductModal">
+          View
+        </button></td>
+        <td><button type="button" class="btn btn-danger"  onclick="deleteUser(${index})">
+          Delete
+        </button></td>
+        <td>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                    <input type="checkbox" aria-label="Checkbox for following text input" ${val.isActive ? "checked" : ""
+        } onclick="toggleActive(${index})">
+                    </div>
+                </div>
+                </div>    
+        </td>
+
+        `;
+
+      tbody.appendChild(tr);
+    });
+  }
+  loadProduct();
+
+  // Deleat User //
+  function deleteUser(index) {
+    console.log(index);
+    products.splice(index, 1);
+    console.log(products);
+    localStorage.setItem("products", JSON.stringify(products));
+    location.reload();
+  }
+
+  // Toggle Active //
+  function toggleActive(index) {
+    products[index].isActive = !products[index].isActive;
+    localStorage.setItem("products", JSON.stringify(products));
+    Location.reload();
+  }
+
+  // View Product //
+  function viewProduct(index) {
+    currentIndex = index;
+    document.getElementById("editPname").value = products[index].productName;
+    document.getElementById("editPrice").value = products[index].price;
+    document.getElementById("editDes").value = products[index].des;
+    document.getElementById("editImg").value = products[index].img;
+  }
+
+  // Update Product //
+  function updateProduct() {
+    products[currentIndex].productName = document.getElementById("editPname").value;
+    products[currentIndex].price = document.getElementById("editPrice").value;
+    products[currentIndex].des = document.getElementById("editDes").value;
+    products[currentIndex].img = document.getElementById("editImg").value;
+
+    localStorage.setItem("products", JSON.stringify(products));
+    location.reload();
+  }
+</script>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.preloadinator.min.js"></script>
+<script src="js/apexcharts.js"></script>
+
+<!-- preloder-js -->
+<script>
+  $(".loader").preloadinator({
+    scroll: false,
+    minTime: 1000,
+    animation: "fadeOut",
+    animationDuration: 400,
+    function() { },
+    afterEnableScroll: function () { },
+    afterRemovePreloader: function () { },
+  });
+</script>
+
+<!-- Active-js -->
+<script>
+  $(document).ready(function () {
+    $('.sidebar-menu .sidebar-item .sidebar-link').click(function () {
+      $('.sidebar-item .sidebar-link').removeClass("active");
+      $(this).addClass("active");
+    });
+  });
+</script>
+
+<!-- submenu-js -->
+<script>
+  $.sidebarMenu = function (menu) {
+    var animationSpeed = 300;
+
+    $(menu).on('click', '.sidebar-item .sidebar-link', function (e) {
+      var $this = $(this);
+      var checkElement = $this.next();
+
+      if (checkElement.is('.sidebar-submenu') && checkElement.is(':visible')) {
+        checkElement.slideUp(animationSpeed, function () {
+          checkElement.removeClass('menu-open');
+        });
+        checkElement.parent(".sidebar-item").removeClass("active");
+      }
+
+      else if ((checkElement.is('.sidebar-submenu')) && (!checkElement.is(':visible'))) {
+        var parent = $this.parents('ul').first();
+        var ul = parent.find('ul:visible').slideUp(animationSpeed);
+        ul.removeClass('menu-open');
+        var parent_li = $this.parent("sidebar-item");
+        checkElement.slideDown(animationSpeed, function () {
+          checkElement.addClass('menu-open');
+          parent.find('.sidebar-item.active').removeClass('active');
+          parent_li.addClass('active');
+        });
+      }
+      if (checkElement.is('.sidebar-submenu')) {
+        e.preventDefault();
+      }
+    });
+  }
+
+  $.sidebarMenu($('.sidebar-menu'))
+</script>
+
+<!-- toggle-js  -->
+<!-- <script>
+  $(document).ready(function () {
+    $(".side-nav-toggle").click(function () {
+      $(".left-sidebar").toggleClass("compact");
+      $(".page-wrapper").toggleClass("extend");
+    });
+  });
+</script> -->
+
+<!-- fullscreen-js -->
+<script>
+  function toggleFullscreen(elem) {
+    elem = elem || document.documentElement;
+    if (!document.fullscreenElement && !document.mozFullScreenElement &&
+      !document.webkitFullscreenElement && !document.msFullscreenElement) {
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.msRequestFullscreen) {
+        elem.msRequestFullscreen();
+      } else if (elem.mozRequestFullScreen) {
+        elem.mozRequestFullScreen();
+      } else if (elem.webkitRequestFullscreen) {
+        elem.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+      }
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
+      } else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      }
+    }
+  }
+
+  document.getElementById('btnFullscreen').addEventListener('click', function () {
+    toggleFullscreen();
+  });
+</script>
+
+<!-- Logout System -->
+<script>
+  function logout() {
+    window.location.href = "../index.html";
+  }
+</script>
+
+</body>
+
+</html>

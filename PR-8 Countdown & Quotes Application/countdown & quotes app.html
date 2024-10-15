@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown & Quotes Application</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .counter-controls {
+            display: flex;
+            align-items: center;
+        }
+
+        .btn-counter {
+            font-size: 30px;
+            padding: 0px 50px 5px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="mb-5 mt-5">Counter App</h1>
+        <div class="counter-controls">
+            <button onclick="increment()" class="btn btn-success btn-counter mr-3">+</button>
+            <button class="btn btn-danger btn-counter">
+                <h1 id="value" class="m-0">0</h1>
+            </button>
+            <button onclick="decrement()" class="btn btn-success btn-counter ml-3">-</button>
+        </div>
+        <button onclick="reset()" class="btn btn-success btn-counter mt-5">Reset</button>
+    </div>
+
+    <script>
+        let value = 0;
+        const valueElement = document.getElementById('value');
+
+        const increment = () => {
+            value++;
+            valueElement.textContent = value;
+        };
+
+        const decrement = () => {
+            value--;
+            valueElement.textContent = value;
+        };
+
+        const reset = () => {
+            value = 0;
+            valueElement.textContent = value;
+        };
+    </script>
+</body>
+
+</html>

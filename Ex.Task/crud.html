@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud</title>
+</head>
+
+<body>
+    <div align="center">
+        <h2>Add User</h2>
+        <form>
+            Name: <input type="text" id="name">
+            Phone: <input type="text" id="phone">
+            <input type="button" onclick="saveRecord()" value="submit">
+        </form>
+
+        <h2>View User</h2>
+        <table border="1" cellpadding="10">
+            <thead>
+                <tr>
+                    <th>Sr No.</th>
+                    <th>Name</th>
+                    <th>Phone No.</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="users"></tbody>
+        </table>
+    </div>
+
+    <script type="text/javascript">
+        let record = [
+            // {
+            //     id: 1,
+            //     name: "kajal",
+            //     phone: 90231,
+            // },
+            // {
+            //     id: 2,
+            //     name: "pruthvi",
+            //     phone: 90239,
+            // },
+            // {
+            //     id: 3,
+            //     name: "john",
+            //     phone: 81412,
+            // },
+        ]
+
+        const saveRecord = () => {
+            let userName = document.getElementById('name').value;
+            let userPhone = document.getElementById('phone').value;
+
+            if (!userName || !userPhone) {
+                alert("All Field Is Required");
+                return false;
+            }
+
+            let obj = {
+                userid: Math.floor(Math.random() * 10000),
+                name: userName,
+                phone: userPhone,
+            }
+            record.push(obj)
+            alert("Record Submit")
+            document.getElementById('name').value = "";
+            document.getElementById('phone').value = "";
+            viewRecord();
+        }
+
+        const viewRecord = () => {
+            let tbl = "";
+            record.map((val, index) => {
+                tbl += `
+                        <tr>
+                            <th>${val.userid}</th>
+                            <th>${val.name}</th> 
+                            <th>${val.phone}</th>
+                            <th>
+                                <button onclick = "deleteRecord(${val.userid})">Delete</button>
+                            </th>
+                        </tr>
+                       `;
+            });
+            document.getElementById('users').innerHTML = tbl
+        }
+        viewRecord();
+
+        const deleteRecord = (id) => {
+            let deletedata = record.filter(item => item.userid != id);
+            record = deletedata;
+            alert("Record Delete");
+            console.log(deletedata);
+
+            viewRecord();
+        }
+    </script>
+
+</body>
+
+</html>

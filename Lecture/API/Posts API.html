@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts API</title>
+</head>
+
+<body>
+    <div align="center">
+        <h2 style="font-size: 30px; color: plum; text-decoration: underline;">~ View Posts ~</h2>
+        <table border="2">
+            <thead style="font-size: 22px; color: violet;">
+                <th>Id</th>
+                <th>Title</th>
+                <th>Tags</th>
+                <th>Reactions</th>
+                <th>Views</th>
+            </thead>
+            <tbody id="posts" style="color: purple"></tbody>
+        </table>
+    </div>
+    
+    <script>
+        fetch('https://dummyjson.com/posts')
+            .then(res => res.json())
+            .then((data) => {
+                let post = '';
+                data.posts.map((p) => {
+                    post += `
+                        <tr>
+                            <td>${p.id}</td>    
+                            <td>${p.title}</td>    
+                            <td>`
+                    p.tags.map((tag) => {
+                        post += `        
+                                   <button style="font-size:16px; background-color: whitesmoke; color: purple;">${p.tags}</button>
+                                `
+                    })
+
+                    post += `</td>
+
+                    <td>Likes :- ${p.reactions.likes}<br>
+                        Dislikes :- ${p.reactions.dislikes}
+                    </td>
+                    <td>${p.views}</td>
+                       </tr>
+                `
+                });
+                document.getElementById('posts').innerHTML = post;
+            })
+    </script>
+</body>
+
+</html>

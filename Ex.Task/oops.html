@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oops</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+
+        class Demo {
+
+            sum() {
+                this.a = 10;
+                this.b = 5;
+                document.write(`<h1>Sum := ${this.a + this.b}</h1>`)
+            }
+
+            min() {
+                document.write(`<h1>Min := ${this.a - this.b}</h1>`)
+            }
+
+            data() {
+                let record = [
+                    {
+                        name: 'kajal',
+                        phone: 12345
+                    },
+                    {
+                        name: 'pruthvi',
+                        phone: 56789
+                    }
+                ]
+
+                console.log(record);
+            }
+        }
+
+        let obj = new Demo
+        obj.sum()
+        obj.min()
+        obj.data()
+
+        9023171482
+
+    </script>
+
+</body>
+
+</html>

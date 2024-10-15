@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <!-- ===== Array Normal Task ===== -->
+    <!-- <script>
+        let arr = [10,20,30,40];
+        console.log(arr);
+
+        let arr = [10,20,30,40];
+        console.log(arr[2]);
+
+        let arr = [10,20,30,40];
+        console.log(arr.length);
+
+        let arr = [10,20,30,40,"kajal",0.3];
+        console.log(arr[4]);
+        console.log(arr.length);
+        arr[4] = "pruthviraj";
+        console.log(arr);
+    </script> -->
+
+    <!-- ===== Array In Loop - 1st Method ===== -->
+    <!-- <script>
+        let arr = [10,20,30,33,34,40];
+        for(i=0;i<=40;i++) {
+            if(arr[i]<40) {
+                console.log(arr[i]);
+        }
+    }
+    </script> -->
+
+    <!-- ===== Array In Loop - 2nd Method ===== -->
+    <!-- <script>
+        let number = [4,5,8,9,7];
+        let m = number[0];
+
+        for(let i=1;i<number.length;i++) {
+            if(number[i]>m) {
+                m = number[i];
+            }
+        }
+        console.log("This Value Is Big:",m);
+    </script> -->
+
+    <!-- ===== Array In Loop - 3rd Method ===== -->
+    <!-- <script>
+        let arr = [10,20,"abcd",30,40];
+        for(let i=0;i<arr.length;i++) {
+            if(arr[i]==="abcd") {
+                console.log("found");
+            } else {
+                console.log("not found");
+            }
+        }
+    </script> -->
+
+    <!-- ===== Array In Loop - 4th Method ===== -->
+    <!-- <script>
+        let arr = [10,20,30,40];
+        // console.log(arr);
+        // console.log(arr.length);
+
+        for(i=0;i<=4;i++) {
+            if(arr[i]<=40) {
+                console.log(arr[i]);
+            }
+            else {
+                console.log("No One");
+            }
+        }
+    </script> -->
+
+    <!-- ===== Array Method - ...Copy & Spread ===== -->
+    <!-- <script>
+        let copy = ["kajal"];
+        let arr = [10,20,...copy,30,40];
+        console.log(arr);
+    </script> -->
+
+    <!-- ===== Array Method - Pop ===== -->
+    <!-- <script>
+        let arr = [10,20,30,40,0.3];
+        arr.pop();
+        console.log(arr);
+    </script> -->
+
+    <!-- ===== Array Method - Push ===== -->
+    <!-- <script>
+        let arr = [10,20,30,40,0.3];
+        arr.push(1000);
+        console.log(arr);
+    </script> -->
+
+    <!-- ===== Array Method - Shift ===== -->
+    <!-- <script>
+        let arr = [10,20,30,40];
+        arr.shift();
+        console.log(arr);
+    </script> -->
+
+    <!-- ===== Array Method - Unshift ===== -->
+    <!-- <script>
+        let arr = [10,20,30,40];
+        arr.unshift(200);
+        console.log(arr);
+    </script> -->
+
+    <!-- ===== Array Method - ...Copy & Spread ===== -->
+    <!-- <script>
+        let copy = ["xyz"];
+        let arr = [10,20,30,...copy,40,0.3];
+        console.log(arr);
+    </script> -->
+
+    <!-- ===== Array Method - IndexOf ===== -->
+    <!-- <script>
+        let arr = [10,20,30,40,0.3,-5];
+        let res = arr.indexOf(0.3);
+        console.log(res);
+    </script> -->
+
+    <!-- ===== Array Method - Includes ===== -->
+    <!-- <script>
+        let arr = [10,20,30,40,0.3,-5,"kajal"];
+        let demo = arr.includes(20);
+        console.log(demo);
+    </script> -->
+
+    <!-- ===== Array Method - Filter-1st Method ===== -->
+    <!-- <script>
+        let arr = [10,20,30,40,"kajal"];
+        let res = arr.filter((val,index)=>val==="kajal");
+        console.log(res);
+    </script> -->
+
+    <!-- ===== Array Method - Filter-2nd Method ===== -->
+    <!-- <script>
+        let arr = [10,20,30,40,"kajal"];
+        let res = arr.filter((val,index)=>index == 3);
+        console.log(res);
+    </script> -->
+
+    <!-- ===== Array Method - Filter-3rd Method ===== -->
+    <!-- <script>
+        let arr = [10,20,30,40,0.3,-5,"kajal"];
+        let res = arr.filter((val,index) => val>20);
+        console.log(res);
+    </script> -->
+
+    <!-- ===== Using Filter Method Find Even Number ===== -->
+    <!-- <script>
+        let arr = [1,2,3,4,5,6,7,8,9,10];
+        let res = arr.filter((val,index)=>val%2==0);
+        console.log(res);
+    </script> -->
+
+    <!-- ===== Array Method - Map-1st Method ===== -->
+    <!-- <script>
+        let arr = [10,20,30,40,0.3,-5,"kajal"];
+        arr.map((val,index)=>console.log(val,index));
+    </script> -->
+
+    <!-- ===== Array Method - Map-2nd Method ===== -->
+    <!-- <script>
+        let arr = [10,20,30,40,0.3,-5,"kajal"];
+        arr.map((val,index)=>console.log(index));
+    </script> -->
+
+    <!-- ===== Nodelist - Query Selector ===== -->
+    <!-- <P>HTML</P>
+    <P>JavaScript</P>
+    <script>
+        let p = document.querySelectorAll("p");
+        console.log(p);
+    </script> -->
+
+    <!-- ===== forEach ===== -->
+    <!-- <P>HTML</P>
+    <P>Java</P>
+    <script>
+        let p = document.querySelectorAll("p");
+        console.log(p);
+        p.forEach((val,index)=>console.log(val,index));
+    </script> -->
+
+    <!-- ===== getElementsByClassName With For Loop ===== -->
+    <!-- <div class="title">XYZ</div>
+    <div class="title">BOX</div>
+    <script>
+        let title = document.getElementsByClassName("title");
+        for(let i=0;i<title.length;i++) {
+            console.log(title);
+        }
+    </script> -->
+
+    <!-- ===== querySelectorAll ===== -->
+    <!-- <div>ABC</div>
+    <script>
+        let div = document.querySelectorAll("div");
+        console.log(div);
+        div.forEach((val,index)=>console.log(val,index));
+    </script> -->
+
+    <!-- ===== Array Method - Slice-1st Method ===== -->
+    <!-- <script>
+        let arr = [10,20,30,40,50,60,70,80,90];
+        let demo = arr.slice(2,5);
+        console.log(demo);
+    </script> -->
+
+    <!-- ===== Array Method - Slice-2nd Method ===== -->
+    <!-- <script>
+        let arr = [10,20,30,40,50,60,70,80,90];
+        let demo = arr.slice(-2);
+        console.log(demo);
+    </script> -->
+
+    <!-- ===== Array Method - Slice-3rd Method ===== -->
+    <!-- <script>
+        let arr = [10,20,30,40,50,60,70,80,90];
+        let demo = arr.slice(0,-5);
+        console.log(demo);
+    </script> -->
+
+    <!-- ===== Array Method - Splice-1st Method ===== -->
+    <!-- <script>
+        let arr = [10,20,30,40];
+        arr.splice(0,3);
+        console.log(arr);
+    </script> -->
+
+    <!-- ===== Array Method - Splice-2nd Method ===== -->
+    <!-- <script>
+        let arr = [10,20,30,40,50,60,70,80,90];
+        arr.splice(6,2,200);
+        console.log(arr);
+    </script> -->
+
+    <!-- ===== Every Task ===== -->
+    <!-- <script>
+        let arr = [10,20,30,40,50];
+        let demo = arr.every((val,index)=>val>0);
+        console.log(demo);
+    </script> -->
+
+    <!-- ===== Some Task ===== -->
+    <!-- <script>
+        let arr = [10,20,60,70,80];
+        let demo = arr.some((val,index)=>val<30);
+        console.log(demo);
+    </script> -->
+
+    <!-- ===== Length Task - 1st Method ===== -->
+    <!-- <script>
+        let text = [30,20,50,"m","kajal"];
+        let demo = text.length;
+        console.log(demo);
+    </script> -->
+
+    <!-- ===== Length Task - 2nd Method ===== -->
+    <!-- <script>
+        let text = "kajal solanki";
+        let demo = text.length;
+        console.log(demo);
+    </script> -->
+
+    <!-- ===== Concat Task - 1st Method ===== -->
+    <!-- <script>
+        let arr = [10,20];
+        let arr2 = [30,40];
+        let demo = arr.concat(arr2);
+        console.log(demo);
+    </script> -->
+
+    <!-- ===== Concat Task - 2nd Method ===== -->
+    <!-- <script>
+        let name = ["neha"];
+        let text = ["kajal"];
+        let demo = name.concat(text);
+        console.log(demo);
+    </script> -->
+
+    <!-- ===== Multiple Array Delete ===== -->
+    <!-- <script>
+        let arr = [10,20,30,40,50,60,70,80,90,2,45,67,34,200,500];
+        let demo = arr.splice(arr.length);
+        console.log(demo);
+    </script> -->
+
+    <!-- ===== Reverse Task ===== -->
+    <!-- <script>
+        let arr = [10,20,30,40];
+        arr.reverse();
+        console.log(arr);
+    </script> -->
+
+    <!-- ===== Sort Task - 1st Method ===== -->
+    <!-- <script>
+        let arr = ["pruthviraj","kajal","dhruti"];
+        arr.sort();
+        console.log(arr);
+    </script> -->
+
+    <!-- ===== Sort Task - 2nd Method ===== -->
+    <!-- <script>
+        let arr = [1,10000,20,30,40,10];
+        arr.sort();
+        console.log(arr);
+    </script> -->
+</body>
+</html>

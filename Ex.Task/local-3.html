@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local-3</title>
+</head>
+<body>
+    <input type="text" id="fname" placeholder="fname" />
+    <input type="text" id="lname" placeholder="lname" />
+    <input type="text" id="email" placeholder="email" />
+    <input type="text" id="pass" placeholder="pass" />
+    <button onclick="register()">Register</button><br /><br />
+
+    <!-- Modal -->
+    <input type="text" id="firstname" placeholder="fname" />
+    <input type="text" id="lastname" placeholder="lname" />
+    <input type="text" id="mail" placeholder="email" />
+    <input type="text" id="password" placeholder="pass" />
+    <input type="hidden" id="index" />
+    <button onclick="update()">Update</button>
+    <button onclick="register()">cancel</button>
+    <br /><br />
+
+    <!-- View User -->
+    <table border="1" cellpadding="10">
+      <thead>
+        <th>Id</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Remove</th>
+      </thead>
+      <tbody id="tbody">
+        <!-- <tr>
+          <td>1</td>
+          <td>Garvit</td>
+          <td>Dhameliya</td>
+          <td>garvit@gmail.com</td>
+          <td>123</td>
+        </tr> -->
+      </tbody>
+    </table>
+
+    <script>
+      let users = JSON.parse(localStorage.getItem("users")) || [];
+      let tbody = document.getElementById("tbody");
+      console.log(users);
+
+      // Register User //
+      function register() {
+        let firstName = document.getElementById("fname").value;
+        let lastName = document.getElementById("lname").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("pass").value;
+
+        let user = {
+          firstName,
+          lastName,
+          email,
+          password,
+        };
+
+        users.push(user);
+
+        localStorage.setItem("users", JSON.stringify(users));
+
+        console.log(users);
+        location.reload();
+      }
+
+      // Load Users //
+      function loadUser() {
+        users.map((val, index) => {
+          let tr = document.createElement("tr");
+          tr.innerHTML = `
+           <td>${index + 1}</td>
+          <td>${val.firstName}</td>
+          <td>${val.lastName}</td>
+          <td>${val.email}</td>
+          <td>${val.password}</td>
+          <td><button onclick="deleteUser(${index})">delete</button></td>
+             <td><button onclick="viewUser(${index})">View</button></td>
+          `;
+          tbody.appendChild(tr);
+        });
+      }
+
+      loadUser();
+
+      // Delete User //
+      function deleteUser(index) {
+        console.log(index);
+        users.splice(index, 1);
+        console.log(users);
+        localStorage.setItem("users", JSON.stringify(users));
+        location.reload();
+
+        // let data = users[index];
+        // console.log(data);
+      }
+
+      // View User //
+      function viewUser(index) {
+        let result = users[index];
+
+        console.log(result);
+        document.getElementById("firstname").value = result.firstName;
+        document.getElementById("lastname").value = result.lastName;
+        document.getElementById("mail").value = result.email;
+        document.getElementById("password").value = result.password;
+        document.getElementById("index").value = index;
+      }
+
+      // Update User //
+      function update() {
+        console.log("update");
+        let firstName = document.getElementById("firstname").value;
+        let lastName = document.getElementById("lastname").value;
+        let email = document.getElementById("mail").value;
+        let password = document.getElementById("password").value;
+
+        let index = parseInt(document.getElementById("index").value);
+
+        console.log(index);
+
+        let updatedUser = {
+          firstName,
+          lastName,
+          email,
+          password,
+        };
+
+        users.splice(index, 1, updatedUser);
+
+        console.log(users);
+
+        localStorage.setItem("users", JSON.stringify(users));
+
+        location.reload();
+      }
+    </script>
+    
+</body>
+</html>

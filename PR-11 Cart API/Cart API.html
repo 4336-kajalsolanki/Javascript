@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart API</title>
+</head>
+
+<body>
+    <div align="center">
+        <h2 style="text-decoration: underline; font-size: 30px; color: deeppink;">! View Carts !</h2>
+        <table border="3" cellpadding="5">
+            <thead style="font-size: 22px; color: palevioletred;">
+                <tr>
+                    <th>Cart ID</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>DiscountPercentage</th>
+                    <th>Thumbnail</th>
+                </tr>
+            </thead>
+            <tbody id="cartsdata" style="color: rosybrown; font-size: 18px;"></tbody>
+        </table>
+    </div>
+
+    <script type="text/javascript">
+
+        fetch('https://dummyjson.com/carts')
+            .then(res => res.json())
+            .then(data => {
+                let tbl = '';
+                data.carts.map(cart => {
+                    cart.products.map(product => {
+                        tbl += `
+                                    <tr>
+                                        <td>${cart.id}</td>
+                                        <td>${product.title}</td>
+                                        <td>${product.price}</td>
+                                        <td>${cart.totalQuantity}</td>
+                                        <td>${cart.total}</td>
+                                        <td>${cart.discountedTotal}</td>
+                                        <td><img src ="${product.thumbnail}" alt="Thumbnail" width="100"></td>
+                                    </tr>
+                               `;
+                    });
+
+                });
+                document.getElementById('cartsdata').innerHTML = tbl;
+            });
+
+    </script>
+
+</body>
+
+</html>

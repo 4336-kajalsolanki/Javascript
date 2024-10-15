@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking-System</title>
+</head>
+
+<body>
+    <script>
+        class Bank {
+
+            constructor(accno, name, bal) {
+                this.accno = accno;
+                this.name = name;
+                this.bal = bal;
+            }
+
+            addBalance(amt) {
+                this.bal = this.bal + amt;
+                console.log(`Your Total Balance: ${this.bal}`);
+            }
+
+            withdraw(amt) {
+                this.bal = this.bal - amt;
+                if (this.bal > 0) {
+                    console.log(`Successfully Withdraw`);
+                } else {
+                    console.log(`Sorry Balance Is Not Valid`);
+                }
+                console.log(`Successfully Withdraw ${this.bal}`);
+            }
+
+            showBalance() {
+                console.log(`Show Your Balance: ${this.bal}`);
+            }
+        }
+
+        let bank = new Bank(123, "kajal", 1000);
+        // bank.addBalance(100);
+        // bank.withdraw(300);
+        // bank.showBalance();
+
+        let add;
+        do {
+            ch = parseInt(prompt("press 1 addBalance 2 withdraw 3 showBalance 0 exit"));
+
+            switch (ch) {
+                case 1:
+                    let depositeAmount = parseInt(prompt("Enter Your addBalance: "));
+                    bank.addBalance(depositeAmount);
+                    bank.showBalance();
+                    break;
+
+                case 2:
+                    let withd = parseInt(prompt("Enter Amount To Withdraw: "));
+                    bank.withdraw(withd);
+                    bank.showBalance();
+                    break;
+
+                case 3:
+                    // let withd = parseInt(prompt("Enter Amount To Withdraw: "));
+                    bank.showBalance();
+                    break;
+
+                case 0:
+                    console.log(`<h1>Thankyou You Are Exit..!</h1>`);
+                    break;
+
+                default:
+                    console.log(`Sorry Invalid..!`);
+                    break;
+            }
+        } while (add != 0);
+    </script>
+
+</body>
+
+</html>
